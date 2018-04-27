@@ -18,8 +18,16 @@
     </div>
     <div id="Search">
       <form action="{% url 'lbforum_recent' %}">
-        <input type="text" class="search" maxlength="40" name="q" value="" id="q">
+        <input type="text" class="search" maxlength="40" name="q" value="" id="q" placeholder="Search here..." required>
+          <select name="cars">
+<option >Yahoo</option>
+<option value="saab">By another</option>
+<option value="fiat" selected="selected">Recent</option>
+<option value="audi">Zhihu</option>
+</select>
+
         <input type="submit" class="super normal button" value="{% trans 'Search' %}" style="-moz-border-radius: 0px 5px 5px 0px; border: none;">
+
       </form>
     </div>
   </div>

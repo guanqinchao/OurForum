@@ -53,6 +53,32 @@ def get_all_posts(user, select_related=True):
     return qs.distinct()
 
 
+def get_forum_info():
+    # 请使用缓存
+    oneday = timedelta(days=1)
+    today = now().date()
+    lastday = today - oneday
+    todayend = today + oneday
+    post_number = Post.objects.count()
+    account_number = LoginUser.objects.count()
+
+    lastday_post_number = cache.get('lastday_post_number', None)
+    today_post_number = cache.get('today_post_number', None)
+
+    if lastday_post_number is None:
+        lastday_post_number = Post.objects.filter(created_at__range=[lastday, today]).count()
+        cache.set('lastday_post_number', lastday_post_number, 60 * 60)
+
+    if today_post_number is None:
+        today_post_number = Post.objects.filter(created_at__range=[today, todayend]).count()
+        cache.set('today_post_number', today_post_number, 60 * 60)
+
+    info = {"post_number": post_number,
+            "account_number": account_number,
+            "lastday_post_number": lastday_post_number,
+            "today_post_number": today_post_number}
+    return info
+
 def index(request, template_name="ourforum/index.html"):
     ctx = {}
     topics = None
