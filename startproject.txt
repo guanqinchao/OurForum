@@ -1,0 +1,1 @@
+django °æ±¾²é¿´£ºpython -m django --version

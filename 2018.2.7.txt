@@ -1,0 +1,31 @@
+require pip install ...
+1、缺少库el_pagination
+ModuleNotFoundError: No module named 'el_pagination'
+若pip出错，可以Github 下载
+https://github.com/shtalinberg/django-el-pagination/tree/master/el_paginationhttps://github.com/shtalinberg/django-el-pagination/tree/master/el_pagination
+2、缺少库 easy_thumbnails
+3、缺少库 constance        说明：http://django-constance.readthedocs.io/en/latest/
+    若pip出错，可以Github 下载 https://github.com/groovecoder/django-constance
+4、缺少库 rest_framework  http://hao.jobbole.com/django-rest-framework/ ；https://www.imooc.com/article/20289
+Django REST framework是一个强大而灵活的Web API工具。使用REST framework的理由有：
+Web browsable API对开发者有极大的好处
+包括OAuth1a和OAuth2的认证策略
+支持ORM和非ORM数据资源的序列化
+全程自定义开发——如果不想使用更加强大的功能，可仅仅使用常规的function-based views
+额外的文档和强大的社区支持
+5、缺少库 lbattachment
+6、缺少库 lbutils
+7、Django在根据models生成数据库表时报 TypeError:  __init__() missing 1 required positional argument: 'on_delete'
+外键关联方式  ，解决： 加 ,on_delete=models.CASCADE
+ 例如： category = models.ForeignKey(Category,on_delete=models.CASCADE)
+ 8、import error  参考：https://blog.csdn.net/heatdeath/article/details/70832681
+ from django.core import urlresolvers
+ImportError: cannot import name 'urlresolvers'
+简单来说，原因就是：django2.0 把原来的 django.core.urlresolvers 包
+ 更改为了 django.urls包，所以我们需要把导入的包都修改一下就可以了。
+ 9、allauth 包下：utils.py
+ def get_username_max_length():
+    from .account.app_settings import USER_MODEL_USERNAME_FIELD
+添加 class
+10、原 from django.utils.six import  urlsplit
+from urllib.parse import urlsplit

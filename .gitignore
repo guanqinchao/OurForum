@@ -1,0 +1,12 @@
+*.pyc
+*.swp
+*.sqlite3
+fabsettings.py
+e.rc
+env/
+env3/
+ref/
+bower_components/
+media/
+collectedstatic/
+/lbforum_site/settings/local.py

@@ -1,0 +1,7 @@
+Django>=1.6.0
+
+[django-crispy-forms]
+django-crispy-forms>1.4
+
+[xlsxwriter]
+xlsxwriter>0.8

@@ -1,0 +1,1166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="55119839-c7a3-471c-92c9-83c123968b8c" name="Default" comment="">
+<<<<<<< HEAD
+      <change beforePath="" afterPath="$PROJECT_DIR$/constance/__init__.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/constance/admin.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/constance/apps.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/constance/backends/__init__.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/constance/backends/database/__init__.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/constance/backends/database/migrations/0001_initial.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/constance/backends/database/migrations/__init__.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/constance/backends/database/models.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/constance/backends/database/south_migrations/0001_initial.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/constance/backends/database/south_migrations/0002_auto__chg_field_constance_key__add_unique_constance_key.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/constance/backends/database/south_migrations/__init__.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/constance/backends/redisd.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/constance/base.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/constance/context_processors.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/constance/locale/cs_CZ/LC_MESSAGES/django.mo" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/constance/locale/cs_CZ/LC_MESSAGES/django.po" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/constance/locale/de/LC_MESSAGES/django.mo" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/constance/locale/de/LC_MESSAGES/django.po" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/constance/locale/en/LC_MESSAGES/django.mo" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/constance/locale/en/LC_MESSAGES/django.po" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/constance/locale/es/LC_MESSAGES/django.mo" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/constance/locale/es/LC_MESSAGES/django.po" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/constance/locale/it/LC_MESSAGES/django.mo" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/constance/locale/it/LC_MESSAGES/django.po" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/constance/locale/pl/LC_MESSAGES/django.mo" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/constance/locale/pl/LC_MESSAGES/django.po" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/constance/locale/ru/LC_MESSAGES/django.mo" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/constance/locale/ru/LC_MESSAGES/django.po" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/constance/locale/zh_CN/LC_MESSAGES/django.mo" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/constance/locale/zh_CN/LC_MESSAGES/django.po" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/constance/settings.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/constance/templates/admin/constance/change_list.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/constance/test/__init__.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/constance/test/utils.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/constance/utils.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/constance/说明" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/easy_thumbnails/__init__.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/easy_thumbnails/alias.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/easy_thumbnails/conf.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/easy_thumbnails/engine.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/easy_thumbnails/exceptions.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/easy_thumbnails/fields.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/easy_thumbnails/files.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/easy_thumbnails/get_version.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/easy_thumbnails/management/__init__.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/easy_thumbnails/management/commands/__init__.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/easy_thumbnails/management/commands/thumbnail_cleanup.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/easy_thumbnails/migrations/0001_initial.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/easy_thumbnails/migrations/0002_thumbnaildimensions.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/easy_thumbnails/migrations/__init__.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/easy_thumbnails/models.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/easy_thumbnails/namers.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/easy_thumbnails/optimize/__init__.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/easy_thumbnails/optimize/conf.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/easy_thumbnails/optimize/post_processor.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/easy_thumbnails/options.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/easy_thumbnails/processors.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/easy_thumbnails/signal_handlers.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/easy_thumbnails/signals.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/easy_thumbnails/source_generators.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/easy_thumbnails/south_migrations/0001_initial.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/easy_thumbnails/south_migrations/0002_filename_indexes.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/easy_thumbnails/south_migrations/0003_auto__add_storagenew.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/easy_thumbnails/south_migrations/0004_auto__add_field_source_storage_new__add_field_thumbnail_storage_new.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/easy_thumbnails/south_migrations/0005_storage_fks_null.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/easy_thumbnails/south_migrations/0006_copy_storage.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/easy_thumbnails/south_migrations/0007_storagenew_fks_not_null.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/easy_thumbnails/south_migrations/0008_auto__del_field_source_storage__del_field_thumbnail_storage.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/easy_thumbnails/south_migrations/0009_auto__del_storage.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/easy_thumbnails/south_migrations/0010_rename_storage.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/easy_thumbnails/south_migrations/0011_auto__add_field_source_storage_hash__add_field_thumbnail_storage_hash.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/easy_thumbnails/south_migrations/0012_build_storage_hashes.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/easy_thumbnails/south_migrations/0013_auto__del_storage__del_field_source_storage__del_field_thumbnail_stora.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/easy_thumbnails/south_migrations/0014_auto__add_unique_source_name_storage_hash__add_unique_thumbnail_name_s.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/easy_thumbnails/south_migrations/0015_auto__del_unique_thumbnail_name_storage_hash__add_unique_thumbnail_sou.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/easy_thumbnails/south_migrations/0016_auto__add_thumbnaildimensions.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/easy_thumbnails/south_migrations/__init__.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/easy_thumbnails/storage.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/easy_thumbnails/templatetags/__init__.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/easy_thumbnails/templatetags/easy_thumbnails_tags.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/easy_thumbnails/templatetags/thumbnail.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/easy_thumbnails/tests/__init__.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/easy_thumbnails/tests/apps.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/easy_thumbnails/tests/mockoptim.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/easy_thumbnails/tests/mockoptim_fail.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/easy_thumbnails/tests/models.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/easy_thumbnails/tests/settings.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/easy_thumbnails/tests/settings_lts.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/easy_thumbnails/tests/settings_old.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/easy_thumbnails/tests/test_aliases.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/easy_thumbnails/tests/test_fields.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/easy_thumbnails/tests/test_files.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/easy_thumbnails/tests/test_management.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/easy_thumbnails/tests/test_models.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/easy_thumbnails/tests/test_namers.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/easy_thumbnails/tests/test_processors.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/easy_thumbnails/tests/test_source_generators.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/easy_thumbnails/tests/test_templatetags.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/easy_thumbnails/tests/test_widgets.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/easy_thumbnails/tests/utils.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/easy_thumbnails/utils.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/easy_thumbnails/widgets.py" />
+      <change beforePath="$PROJECT_DIR$/.idea/lbforum-site-master.iml" afterPath="$PROJECT_DIR$/.idea/lbforum-site-master.iml" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/forum/.idea/workspace.xml" afterPath="$PROJECT_DIR$/forum/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/lbforum/migrations/0001_initial.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/lbforum/migrations/0002_auto_20160811_0211.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/lbforum/templates/lbforum/post.html" afterPath="$PROJECT_DIR$/lbforum/templates/lbforum/post.html" />
+=======
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+>>>>>>> d97cdeeb28c5a61058754418d13d948c9dd12d8a
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+<<<<<<< HEAD
+    <SUITE FILE_PATH="coverage/Test_Forum$manage.coverage" NAME="manage Coverage Results" MODIFIED="1521299273311" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="Test_Forum" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lbforum_site/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="19" lean-forward="false" selection-start-line="0" selection-start-column="19" selection-end-line="0" selection-end-column="19" />
+              <folding />
+=======
+    <SUITE FILE_PATH="coverage/Test_Forum$manage.coverage" NAME="manage Coverage Results" MODIFIED="1518870822535" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file leaf-file-name="manage.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/manage.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="396">
+              <caret line="13" column="25" lean-forward="false" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
+              <folding>
+                <element signature="e#22#31#0" expanded="true" />
+              </folding>
+>>>>>>> d97cdeeb28c5a61058754418d13d948c9dd12d8a
+            </state>
+          </provider>
+        </entry>
+      </file>
+<<<<<<< HEAD
+      <file leaf-file-name="signals.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lbforum_site/signals.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#46#0" expanded="true" />
+              </folding>
+=======
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lbforum/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="33">
+              <caret line="61" column="24" lean-forward="false" selection-start-line="60" selection-start-column="4" selection-end-line="61" selection-end-column="24" />
+              <folding />
+>>>>>>> d97cdeeb28c5a61058754418d13d948c9dd12d8a
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lbforum/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+            <state relative-caret-position="365">
+              <caret line="182" column="48" lean-forward="true" selection-start-line="182" selection-start-column="48" selection-end-line="182" selection-end-column="48" />
+=======
+            <state relative-caret-position="33">
+              <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+>>>>>>> d97cdeeb28c5a61058754418d13d948c9dd12d8a
+              <folding>
+                <element signature="e#24#63#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="forms.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lbforum/forms.py">
+          <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+            <state relative-caret-position="290">
+              <caret line="59" column="46" lean-forward="true" selection-start-line="59" selection-start-column="46" selection-end-line="59" selection-end-column="46" />
+=======
+            <state relative-caret-position="6435">
+              <caret line="199" column="23" lean-forward="false" selection-start-line="199" selection-start-column="23" selection-end-line="199" selection-end-column="23" />
+>>>>>>> d97cdeeb28c5a61058754418d13d948c9dd12d8a
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="inc_footer.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lbforum/templates/lbforum/plugins/inc_footer.html">
+          <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+            <state relative-caret-position="125">
+              <caret line="5" column="69" lean-forward="false" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="69" />
+              <folding />
+=======
+            <state relative-caret-position="10395">
+              <caret line="333" column="26" lean-forward="false" selection-start-line="333" selection-start-column="26" selection-end-line="333" selection-end-column="26" />
+              <folding>
+                <marker date="1518771271644" expanded="true" signature="12525:12767" ph="SELECT REFER... missing_value" />
+              </folding>
+>>>>>>> d97cdeeb28c5a61058754418d13d948c9dd12d8a
+            </state>
+          </provider>
+        </entry>
+      </file>
+<<<<<<< HEAD
+=======
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lbforum/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="132">
+              <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+>>>>>>> d97cdeeb28c5a61058754418d13d948c9dd12d8a
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/lbforum_site/settings/base.py" />
+        <option value="$PROJECT_DIR$/manage.py" />
+<<<<<<< HEAD
+        <option value="$PROJECT_DIR$/constance/test/utils.py" />
+        <option value="$PROJECT_DIR$/constance/说明" />
+        <option value="$PROJECT_DIR$/lbforum/templates/lbforum/post.html" />
+        <option value="$PROJECT_DIR$/lbforum/models.py" />
+=======
+>>>>>>> d97cdeeb28c5a61058754418d13d948c9dd12d8a
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+<<<<<<< HEAD
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-33" />
+    <option name="y" value="7" />
+    <option name="width" value="1700" />
+    <option name="height" value="950" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+=======
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="x" value="75" />
+    <option name="y" value="90" />
+    <option name="width" value="1822" />
+    <option name="height" value="975" />
+>>>>>>> d97cdeeb28c5a61058754418d13d948c9dd12d8a
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+<<<<<<< HEAD
+      <pane id="Scope" />
+=======
+      <pane id="Scratches" />
+>>>>>>> d97cdeeb28c5a61058754418d13d948c9dd12d8a
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Test_Forum" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Test_Forum" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Test_Forum" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Test_Forum" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
+              <item name="lbattachment" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Test_Forum" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Test_Forum" type="462c0819:PsiDirectoryNode" />
+              <item name="lbforum" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Test_Forum" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Test_Forum" type="462c0819:PsiDirectoryNode" />
+              <item name="lbforum" type="462c0819:PsiDirectoryNode" />
+              <item name="migrations" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Test_Forum" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Test_Forum" type="462c0819:PsiDirectoryNode" />
+              <item name="lbforum" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Test_Forum" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Test_Forum" type="462c0819:PsiDirectoryNode" />
+              <item name="lbforum" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="lbforum" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Test_Forum" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Test_Forum" type="462c0819:PsiDirectoryNode" />
+              <item name="lbforum" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="lbforum" type="462c0819:PsiDirectoryNode" />
+              <item name="plugins" type="462c0819:PsiDirectoryNode" />
+=======
+              <item name="lbforum" type="462c0819:PsiDirectoryNode" />
+>>>>>>> d97cdeeb28c5a61058754418d13d948c9dd12d8a
+            </path>
+            <path>
+              <item name="Test_Forum" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Test_Forum" type="462c0819:PsiDirectoryNode" />
+              <item name="lbforum_site" type="462c0819:PsiDirectoryNode" />
+            </path>
+<<<<<<< HEAD
+            <path>
+              <item name="Test_Forum" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Test_Forum" type="462c0819:PsiDirectoryNode" />
+              <item name="lbforum_site" type="462c0819:PsiDirectoryNode" />
+              <item name="settings" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Test_Forum" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Test_Forum" type="462c0819:PsiDirectoryNode" />
+              <item name="venv" type="462c0819:PsiDirectoryNode" />
+            </path>
+=======
+>>>>>>> d97cdeeb28c5a61058754418d13d948c9dd12d8a
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+<<<<<<< HEAD
+      <pane id="Scratches" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/venv" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\workspace\Test_Forum" />
+    </key>
+=======
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../forum" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+>>>>>>> d97cdeeb28c5a61058754418d13d948c9dd12d8a
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+<<<<<<< HEAD
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+=======
+    <configuration name="manage" type="PythonConfigurationType" factoryName="Python" temporary="true">
+>>>>>>> d97cdeeb28c5a61058754418d13d948c9dd12d8a
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="lbforum-site-master" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+<<<<<<< HEAD
+    </configuration>
+    <configuration name="manage" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="lbforum-site-master" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/manage.py" />
+      <option name="PARAMETERS" value="runserver 127.0.0.1:8000" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+=======
+>>>>>>> d97cdeeb28c5a61058754418d13d948c9dd12d8a
+    </configuration>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="Python.manage" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="55119839-c7a3-471c-92c9-83c123968b8c" name="Default" comment="" />
+      <created>1517822092554</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1517822092554</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+<<<<<<< HEAD
+    <frame x="-33" y="7" width="1700" height="950" extended-state="0" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17148015" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+=======
+    <frame x="75" y="90" width="1822" height="975" extended-state="1" />
+    <layout>
+>>>>>>> d97cdeeb28c5a61058754418d13d948c9dd12d8a
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="调试" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.38308457" sideWeight="0.50293255" order="0" side_tool="true" content_ui="tabs" />
+<<<<<<< HEAD
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18282208" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3165644" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5" sideWeight="0.49706745" order="5" side_tool="false" content_ui="tabs" />
+=======
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34409937" sideWeight="0.49706745" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="运行" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5180124" sideWeight="0.42375368" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21052632" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+>>>>>>> d97cdeeb28c5a61058754418d13d948c9dd12d8a
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32857144" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+<<<<<<< HEAD
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+=======
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+>>>>>>> d97cdeeb28c5a61058754418d13d948c9dd12d8a
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="2" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/lbforum/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#41#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#22#31#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lbforum/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="150">
+          <caret line="17" column="43" lean-forward="false" selection-start-line="17" selection-start-column="43" selection-end-line="17" selection-end-column="43" />
+          <folding>
+            <element signature="e#24#63#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#39#0" expanded="false" />
+          </folding>
+=======
+        <state relative-caret-position="2013">
+          <caret line="61" column="24" lean-forward="true" selection-start-line="60" selection-start-column="4" selection-end-line="61" selection-end-column="24" />
+          <folding />
+>>>>>>> d97cdeeb28c5a61058754418d13d948c9dd12d8a
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lbforum_site/settings/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="4875">
+          <caret line="199" column="23" lean-forward="false" selection-start-line="199" selection-start-column="23" selection-end-line="199" selection-end-column="23" />
+          <folding>
+            <element signature="e#314#323#0" expanded="false" />
+          </folding>
+=======
+        <state relative-caret-position="6435">
+          <caret line="199" column="23" lean-forward="false" selection-start-line="199" selection-start-column="23" selection-end-line="199" selection-end-column="23" />
+          <folding />
+>>>>>>> d97cdeeb28c5a61058754418d13d948c9dd12d8a
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/db/backends/sqlite3/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="7875">
+          <caret line="333" column="26" lean-forward="false" selection-start-line="333" selection-start-column="26" selection-end-line="333" selection-end-column="26" />
+          <folding />
+=======
+        <state relative-caret-position="10395">
+          <caret line="333" column="26" lean-forward="false" selection-start-line="333" selection-start-column="26" selection-end-line="333" selection-end-column="26" />
+          <folding>
+            <marker date="1518771271644" expanded="true" signature="12525:12767" ph="SELECT REFER... missing_value" />
+          </folding>
+>>>>>>> d97cdeeb28c5a61058754418d13d948c9dd12d8a
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lbforum/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="100">
+=======
+        <state relative-caret-position="132">
+>>>>>>> d97cdeeb28c5a61058754418d13d948c9dd12d8a
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#41#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+<<<<<<< HEAD
+          <caret line="13" column="25" lean-forward="false" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
+          <folding>
+            <element signature="e#22#31#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lbforum/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+=======
+>>>>>>> d97cdeeb28c5a61058754418d13d948c9dd12d8a
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#24#63#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="0">
+=======
+        <state relative-caret-position="33">
+>>>>>>> d97cdeeb28c5a61058754418d13d948c9dd12d8a
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#39#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lbforum_site/settings/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="0">
+          <caret line="199" column="23" lean-forward="false" selection-start-line="199" selection-start-column="23" selection-end-line="199" selection-end-column="23" />
+          <folding>
+            <element signature="e#314#323#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/db/backends/sqlite3/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="333" column="26" lean-forward="false" selection-start-line="333" selection-start-column="26" selection-end-line="333" selection-end-column="26" />
+=======
+        <state relative-caret-position="6435">
+          <caret line="199" column="23" lean-forward="false" selection-start-line="199" selection-start-column="23" selection-end-line="199" selection-end-column="23" />
+>>>>>>> d97cdeeb28c5a61058754418d13d948c9dd12d8a
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lbforum/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#41#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#22#31#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#39#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lbforum_site/settings/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="199" column="23" lean-forward="false" selection-start-line="199" selection-start-column="23" selection-end-line="199" selection-end-column="23" />
+          <folding>
+            <element signature="e#314#323#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/db/backends/sqlite3/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="0">
+          <caret line="333" column="26" lean-forward="false" selection-start-line="333" selection-start-column="26" selection-end-line="333" selection-end-column="26" />
+          <folding />
+=======
+        <state relative-caret-position="10395">
+          <caret line="333" column="26" lean-forward="false" selection-start-line="333" selection-start-column="26" selection-end-line="333" selection-end-column="26" />
+          <folding>
+            <marker date="1518771271644" expanded="true" signature="12525:12767" ph="SELECT REFER... missing_value" />
+          </folding>
+>>>>>>> d97cdeeb28c5a61058754418d13d948c9dd12d8a
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2018.2.7.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="23" lean-forward="false" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lbforum/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="0">
+=======
+        <state relative-caret-position="132">
+>>>>>>> d97cdeeb28c5a61058754418d13d948c9dd12d8a
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#41#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#22#31#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/django/__init__.py" />
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="0">
+=======
+        <state relative-caret-position="99">
+>>>>>>> d97cdeeb28c5a61058754418d13d948c9dd12d8a
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#39#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lbforum_site/settings/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="0">
+          <caret line="199" column="23" lean-forward="false" selection-start-line="199" selection-start-column="23" selection-end-line="199" selection-end-column="23" />
+          <folding>
+            <element signature="e#314#323#0" expanded="false" />
+          </folding>
+=======
+        <state relative-caret-position="6435">
+          <caret line="199" column="23" lean-forward="false" selection-start-line="199" selection-start-column="23" selection-end-line="199" selection-end-column="23" />
+          <folding />
+>>>>>>> d97cdeeb28c5a61058754418d13d948c9dd12d8a
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/db/backends/sqlite3/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="0">
+          <caret line="333" column="26" lean-forward="false" selection-start-line="333" selection-start-column="26" selection-end-line="333" selection-end-column="26" />
+          <folding />
+=======
+        <state relative-caret-position="10395">
+          <caret line="333" column="26" lean-forward="false" selection-start-line="333" selection-start-column="26" selection-end-line="333" selection-end-column="26" />
+          <folding>
+            <marker date="1518771271644" expanded="true" signature="12525:12767" ph="SELECT REFER... missing_value" />
+          </folding>
+>>>>>>> d97cdeeb28c5a61058754418d13d948c9dd12d8a
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2018.2.7.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="23" lean-forward="false" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lbforum/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="0">
+=======
+        <state relative-caret-position="297">
+>>>>>>> d97cdeeb28c5a61058754418d13d948c9dd12d8a
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#41#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manage.py">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="0">
+=======
+        <state relative-caret-position="198">
+>>>>>>> d97cdeeb28c5a61058754418d13d948c9dd12d8a
+          <caret line="7" column="16" lean-forward="false" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
+          <folding>
+            <element signature="e#22#31#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="0">
+=======
+        <state relative-caret-position="33">
+>>>>>>> d97cdeeb28c5a61058754418d13d948c9dd12d8a
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#39#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lbforum_site/settings/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="0">
+          <caret line="199" column="23" lean-forward="false" selection-start-line="199" selection-start-column="23" selection-end-line="199" selection-end-column="23" />
+          <folding>
+            <element signature="e#314#323#0" expanded="false" />
+          </folding>
+=======
+        <state relative-caret-position="6435">
+          <caret line="199" column="23" lean-forward="true" selection-start-line="199" selection-start-column="23" selection-end-line="199" selection-end-column="23" />
+          <folding />
+>>>>>>> d97cdeeb28c5a61058754418d13d948c9dd12d8a
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lbforum/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="0">
+=======
+        <state relative-caret-position="132">
+>>>>>>> d97cdeeb28c5a61058754418d13d948c9dd12d8a
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#41#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/db/backends/sqlite3/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="0">
+          <caret line="333" column="26" lean-forward="false" selection-start-line="333" selection-start-column="26" selection-end-line="333" selection-end-column="26" />
+          <folding />
+=======
+        <state relative-caret-position="10395">
+          <caret line="333" column="26" lean-forward="true" selection-start-line="333" selection-start-column="26" selection-end-line="333" selection-end-column="26" />
+          <folding>
+            <marker date="1518771271644" expanded="true" signature="12525:12767" ph="SELECT REFER... missing_value" />
+          </folding>
+>>>>>>> d97cdeeb28c5a61058754418d13d948c9dd12d8a
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lbforum_site/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="0">
+          <caret line="12" column="47" lean-forward="false" selection-start-line="12" selection-start-column="47" selection-end-line="12" selection-end-column="47" />
+=======
+        <state relative-caret-position="75">
+          <caret line="12" column="47" lean-forward="true" selection-start-line="12" selection-start-column="47" selection-end-line="12" selection-end-column="47" />
+>>>>>>> d97cdeeb28c5a61058754418d13d948c9dd12d8a
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lbforum/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="100">
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#41#0" expanded="false" />
+=======
+        <state relative-caret-position="132">
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+>>>>>>> d97cdeeb28c5a61058754418d13d948c9dd12d8a
+          </folding>
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/django/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+=======
+    <entry file="file://$PROJECT_DIR$/lbforum_site/settings/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6435">
+          <caret line="199" column="23" lean-forward="false" selection-start-line="199" selection-start-column="23" selection-end-line="199" selection-end-column="23" />
+          <folding />
+>>>>>>> d97cdeeb28c5a61058754418d13d948c9dd12d8a
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/django/__init__.py" />
+    <entry file="file://$PROJECT_DIR$/2018.2.7.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="23" lean-forward="false" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="23" />
+<<<<<<< HEAD
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/startproject.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/constance/test/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/easy_thumbnails/tests/apps.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/constance/说明">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="63" lean-forward="false" selection-start-line="0" selection-start-column="63" selection-end-line="0" selection-end-column="63" />
+=======
+>>>>>>> d97cdeeb28c5a61058754418d13d948c9dd12d8a
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/db/backends/sqlite3/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="312">
+          <caret line="333" column="26" lean-forward="false" selection-start-line="333" selection-start-column="26" selection-end-line="333" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lbforum_site/settings/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1947">
+          <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding>
+            <element signature="e#314#323#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#39#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="13" column="25" lean-forward="false" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
+          <folding>
+            <element signature="e#22#31#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/db/models/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2070">
+          <caret line="454" column="6" lean-forward="false" selection-start-line="454" selection-start-column="6" selection-end-line="454" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/db/models/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-459">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#27#0" expanded="false" />
+=======
+        <state relative-caret-position="10395">
+          <caret line="333" column="26" lean-forward="false" selection-start-line="333" selection-start-column="26" selection-end-line="333" selection-end-column="26" />
+          <folding>
+            <marker date="1518771271644" expanded="true" signature="12525:12767" ph="SELECT REFER... missing_value" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="13" column="25" lean-forward="false" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
+          <folding>
+            <element signature="e#22#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="33">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+>>>>>>> d97cdeeb28c5a61058754418d13d948c9dd12d8a
+          </folding>
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/lbforum/templates/lbforum/plugins/inc_footer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="5" column="69" lean-forward="false" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="69" />
+=======
+    <entry file="file://$PROJECT_DIR$/lbforum/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="33">
+          <caret line="61" column="24" lean-forward="false" selection-start-line="60" selection-start-column="4" selection-end-line="61" selection-end-column="24" />
+>>>>>>> d97cdeeb28c5a61058754418d13d948c9dd12d8a
+          <folding />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/lbforum/templates/lbforum/post.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1267">
+          <caret line="65" column="17" lean-forward="true" selection-start-line="65" selection-start-column="17" selection-end-line="65" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lbforum/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="59" column="46" lean-forward="true" selection-start-line="59" selection-start-column="46" selection-end-line="59" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lbattachment/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="498">
+          <caret line="48" column="5" lean-forward="true" selection-start-line="48" selection-start-column="5" selection-end-line="48" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lbforum/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="365">
+          <caret line="182" column="48" lean-forward="true" selection-start-line="182" selection-start-column="48" selection-end-line="182" selection-end-column="48" />
+          <folding>
+            <element signature="e#24#63#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lbforum_site/signals.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#46#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lbforum_site/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="19" lean-forward="false" selection-start-line="0" selection-start-column="19" selection-end-line="0" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+=======
+>>>>>>> d97cdeeb28c5a61058754418d13d948c9dd12d8a
+  </component>
+</project>
