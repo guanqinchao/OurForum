@@ -71,9 +71,10 @@ INSTALLED_APPS = [
 
 
 MIDDLEWARE = [
+
     'django.middleware.security.SecurityMiddleware',
-    'django.middleware.locale.LocaleMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -142,15 +143,40 @@ AUTH_PASSWORD_VALIDATORS = [
 # LANGUAGE_CODE = 'en-us'
 #
 # TIME_ZONE = 'UTC'
-LANGUAGE_CODE = 'zh-Hans'
+# LANGUAGE_CODE = 'zh-hans'
+# TIME_ZONE = 'Asia/Shanghai'
+# USE_I18N = True
+#
+# USE_L10N = True
+#
+# USE_TZ = True
+# LANGUAGES=(
+#   ('en-us', u'English'),
+#   ('zh-hans',u'简体中文')
+# )
+LANGUAGE_CODE = 'en-us'
 TIME_ZONE = 'Asia/Shanghai'
+
 USE_I18N = True
-
 USE_L10N = True
-
 USE_TZ = True
 
+LANGUAGES = (
+    ('en-us', ('English')),
+    ('zh-hans', ('中文简体')),
+    ('zh-hant', ('中文繁體')),
+    ('cs', ('Czech')),
+)
+LANGUAGE_COOKIE_NAME = "sessionid"  # Session的cookie保存在浏览器上时的key，即：sessionid＝随机字符串（默认）
+LANGUAGE_COOKIE_DOMAIN = None    # Session的cookie保存的域名（默认）
+LANGUAGE_COOKIE_PATH = "/"    # Session的cookie保存的路径（默认）
 
+LANGUAGE_COOKIE_AGE = 1209600    # Session的cookie失效日期（2周）（默认）
+
+# 翻译文件所在目录，需要手工创建
+LOCALE_PATHS = (
+    os.path.join(BASE_DIR, 'locale'),
+)
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 

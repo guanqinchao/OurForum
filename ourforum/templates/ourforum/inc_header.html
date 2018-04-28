@@ -21,7 +21,6 @@
         <input type="text" class="search" maxlength="40" name="q" value="" id="q" placeholder="Search here..." required>
           <select name="cars">
 <option >Yahoo</option>
-<option value="saab">By another</option>
 <option value="fiat" selected="selected">Recent</option>
 <option value="audi">Zhihu</option>
 </select>
@@ -29,6 +28,16 @@
         <input type="submit" class="super normal button" value="{% trans 'Search' %}" style="-moz-border-radius: 0px 5px 5px 0px; border: none;">
 
       </form>
+<form action="{% url 'selected_language' %}" method="post">
+    {% csrf_token %}
+    <input name="next" type="hidden" value="{{lbforum_index}}"/>
+    <select name="language"> {% for lang in LANGUAGES %}
+        <option value="{{ lang.0 }}">{{ lang.1 }}
+        </option>
+        {% endfor %} </select>
+    <input type="submit" value="Go" />
+</form>
     </div>
+
   </div>
 </div>

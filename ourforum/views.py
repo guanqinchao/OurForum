@@ -19,9 +19,40 @@ from .templatetags.lbforum_filters import topic_can_post
 from .forms import EditPostForm, NewPostForm, ForumForm
 from .models import Topic, Forum, Post
 from ourforum.models import LoginUser as user
-
+from ourforum_site.settings import base as settings
+from django import http
+from django.utils.http import is_safe_url
+from django.utils.translation import (
+    LANGUAGE_SESSION_KEY, check_for_language, get_language, to_locale,
+)
 User = user
 
+def set_language(request):
+    """
+    Redirect to a given url while setting the chosen language in the session or cookie. The url and the language code need to be specified in the request parameters.
+    Since this view changes how the user will see the rest of the site, it must only be accessed as a POST request. If called as a GET request, it will redirect to the page in the request (the 'next' parameter) without changing any state.
+
+    当在 session 或 cookie 中设置所选择的语言时，会重定向到指定的网址。URL 和语言代码需要在 request 的参数中被指定。由于这个视图改变用户如何看到网站的其他部分，它必须只能通过 POST request. 如果调用 GET request, 它将重定向到 request 的那页，但没有任何状态改变。
+
+    """
+    next = request.POST.get('next', request.GET.get('next'))
+    if not is_safe_url(url=next, host=request.get_host()):
+        next = request.META.get('HTTP_REFERER')#using http://127.0.0.1:8000/
+        if not is_safe_url(url=next, host=request.get_host()):
+            next = '/'
+    response = http.HttpResponseRedirect(next)#next is http://127.0.0.1:8000/
+    if request.method == 'POST':
+        lang_code = request.POST.get('language', None)
+        if lang_code and check_for_language(lang_code):
+            if hasattr(request, 'session'):
+                request.session[LANGUAGE_SESSION_KEY] = lang_code;
+                print(lang_code, 'session')#using this
+            else:
+                response.set_cookie(settings.LANGUAGE_COOKIE_NAME, lang_code,
+                                    max_age=settings.LANGUAGE_COOKIE_AGE,
+                                    path=settings.LANGUAGE_COOKIE_PATH,
+                                    domain=settings.LANGUAGE_COOKIE_DOMAIN);print(lang_code, 'cookie')
+    return response
 
 def get_all_topics(user, select_related=True):
     topics = Topic.objects.all()
@@ -53,33 +84,12 @@ def get_all_posts(user, select_related=True):
     return qs.distinct()
 
 
-def get_forum_info():
-    # 请使用缓存
-    oneday = timedelta(days=1)
-    today = now().date()
-    lastday = today - oneday
-    todayend = today + oneday
-    post_number = Post.objects.count()
-    account_number = LoginUser.objects.count()
 
-    lastday_post_number = cache.get('lastday_post_number', None)
-    today_post_number = cache.get('today_post_number', None)
-
-    if lastday_post_number is None:
-        lastday_post_number = Post.objects.filter(created_at__range=[lastday, today]).count()
-        cache.set('lastday_post_number', lastday_post_number, 60 * 60)
-
-    if today_post_number is None:
-        today_post_number = Post.objects.filter(created_at__range=[today, todayend]).count()
-        cache.set('today_post_number', today_post_number, 60 * 60)
-
-    info = {"post_number": post_number,
-            "account_number": account_number,
-            "lastday_post_number": lastday_post_number,
-            "today_post_number": today_post_number}
-    return info
 
 def index(request, template_name="ourforum/index.html"):
+    '''
+        首页
+        '''
     ctx = {}
     topics = None
     user = request.user

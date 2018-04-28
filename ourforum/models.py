@@ -3,7 +3,7 @@ from __future__ import unicode_literals
 
 from django.db import models
 from django.db.models.signals import post_save
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import ugettext_lazy as _#国际化支持
 # from django.conf import settings
 from ourforum_site.settings  import base as settings
 from easy_thumbnails.fields import ThumbnailerImageField

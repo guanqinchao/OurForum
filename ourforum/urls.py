@@ -54,7 +54,8 @@ urlpatterns = [
     url(r'^topic/', include(topic_patterns)),
     url(r'^profile/', include(profile_patterns)),
     url(r'^api/', include(router.urls)),
-
+    url(r'^i18n/', include('django.conf.urls.i18n')),
+    url(r'^i18n/setlang', views.set_language,name='selected_language'),
     url('^reply/new/(?P<topic_id>\d+)/$', views.new_post,
         name='lbforum_new_replay'),
     url(r'^post/', include(post_patterns)),
