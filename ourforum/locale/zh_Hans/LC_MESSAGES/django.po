@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-28 16:17+0800\n"
+"POT-Creation-Date: 2018-04-28 18:30+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -48,7 +48,7 @@ msgstr "最新话题"
 msgid "Order By"
 msgstr "排序方式"
 
-#: .\forms.py:56
+#: .\forms.py:56 .\models.py:57 .\models.py:95 .\models.py:113
 msgid "Forum"
 msgstr "版块"
 
@@ -85,38 +85,38 @@ msgid "Some word in you post is forbidden, please correct it."
 msgstr "您的内容包含敏感词，请修正"
 
 #: .\models.py:29
-msgid "板块类别"
-msgstr ""
+msgid "Category"
+msgstr "板块类型"
 
 #: .\models.py:30
-msgid "板块类别（复数形式）"
-msgstr "板块类别（复数形式）"
+msgid "Categories"
+msgstr "板块类型（复数）"
 
 #: .\models.py:53 .\models.py:131
 #: .\templates\ourforum\inc_topic_detail.html:44
 #: .\templates\ourforum\topic.html:112
 msgid "Last post"
-msgstr "最新文章"
+msgstr "最新问答"
 
-#: .\models.py:57 .\models.py:95 .\models.py:113
-msgid "板块"
-msgstr "版块"
-
-#: .\models.py:58
-msgid "板块（复数形式)"
-msgstr "板块（复数形式)"
+#: .\models.py:58 .\templates\ourforum\widgets\categories_and_forums.html:4
+msgid "Forums"
+msgstr "社区板块"
 
 #: .\models.py:61
 msgid "Forum-Administrator"
 msgstr "社区管理员"
 
 #: .\models.py:100 .\models.py:115
-msgid "话题类型"
+#, fuzzy
+#| msgid "Topic Type"
+msgid "TopicType"
 msgstr "话题类型"
 
 #: .\models.py:101
-msgid "话题类型（复数形式）"
-msgstr "话题类型（复数形式"
+#, fuzzy
+#| msgid "Topic Type"
+msgid "TopicTypes"
+msgstr "话题类型"
 
 #: .\models.py:106
 msgid "Default"
@@ -128,7 +128,7 @@ msgstr "精华"
 
 #: .\models.py:120 .\models.py:201
 msgid "Post"
-msgstr "文章"
+msgstr "问答"
 
 #: .\models.py:177
 msgid "BBCode"
@@ -143,13 +143,15 @@ msgid "Html"
 msgstr "Html"
 
 #: .\models.py:181
-msgid "话题"
-msgstr "话题"
+#, fuzzy
+#| msgid "Topics"
+msgid "Topic"
+msgstr "话题（复数）"
 
 #: .\models.py:202 .\templates\ourforum\profile\inc_base_profile.html:28
 #: .\templates\ourforum\topic.html:110
 msgid "Posts"
-msgstr "文章(复数)"
+msgstr "问答(复数)"
 
 #: .\models.py:211
 #, python-format
@@ -159,7 +161,7 @@ msgstr "话题: %s"
 #: .\models.py:212
 #, python-format
 msgid "Re: %s"
-msgstr "Re: %s"
+msgstr "回复: %s"
 
 #: .\models.py:248
 msgid "Female"
@@ -169,7 +171,7 @@ msgstr "女"
 msgid "Male"
 msgstr "男"
 
-#: .\models.py:253
+#: .\models.py:253 .\models.py:305
 msgid "User"
 msgstr "用户"
 
@@ -182,12 +184,29 @@ msgid "Avatar"
 msgstr "头像"
 
 #: .\models.py:262
-msgid "用户信息完善"
-msgstr "用户信息完善"
+msgid "UserProfile"
+msgstr "用户信息"
 
 #: .\models.py:263
-msgid "用户信息完善（复数形式）"
-msgstr "用户信息完善（复数形式）"
+msgid "UserProfiles"
+msgstr "用户信息（复数）"
+
+#: .\models.py:331
+#, fuzzy
+#| msgid "Message"
+msgid "Messages"
+msgstr "内容"
+
+#: .\models.py:346
+#, fuzzy
+msgid "FriendApplications"
+msgstr "好友申请"
+
+#: .\models.py:364
+#, fuzzy
+#| msgid "Topics"
+msgid "Notices"
+msgstr "通知（复数）"
 
 #: .\templates\ourforum\forum.html:19
 msgid "Forum Description"
@@ -299,7 +318,9 @@ msgid "Friend Links"
 msgstr "友情链接"
 
 #: .\templates\ourforum\index.html:30
-msgid "Hi,Welcome to"
+#, fuzzy
+#| msgid "Hi,Welcome to"
+msgid "Hi,Welcome to "
 msgstr "您好，欢迎来到 "
 
 #: .\templates\ourforum\index.html:38
@@ -392,7 +413,7 @@ msgstr "查看所有话题"
 
 #: .\templates\ourforum\profile\inc_base_profile.html:36
 msgid "View all posts"
-msgstr "查看所有文章"
+msgstr "查看所有问答"
 
 #: .\templates\ourforum\profile\profile.html:8
 #, python-format
@@ -402,7 +423,7 @@ msgstr "%(view_user.lbforum_profile)s 的个人信息"
 #: .\templates\ourforum\profile\user_posts.html:9
 #, python-format
 msgid "%(view_user.lbforum_profile)s's posts"
-msgstr "%(view_user.lbforum_profile)s 的文章"
+msgstr "%(view_user.lbforum_profile)s 的问答"
 
 #: .\templates\ourforum\profile\user_posts.html:19
 msgid "Posts by"
@@ -419,7 +440,7 @@ msgstr "作者"
 
 #: .\templates\ourforum\profile\user_topics.html:23
 msgid "replies"
-msgstr "回复"
+msgstr "回复数"
 
 #: .\templates\ourforum\profile\user_topics.html:24
 msgid "topics"
@@ -487,10 +508,6 @@ msgstr "无回复"
 msgid "Quick reply to this topic"
 msgstr "快速回复"
 
-#: .\templates\ourforum\widgets\categories_and_forums.html:4
-msgid "Forums"
-msgstr "社区板块"
-
 #: .\templates\ourforum\widgets\lbf_status.html:4
 msgid "Forum Status"
 msgstr "社区状态"
@@ -501,11 +518,11 @@ msgstr "注册用户数"
 
 #: .\templates\ourforum\widgets\lbf_status.html:14
 msgid "Total number of topics"
-msgstr "话题数"
+msgstr "话题计数"
 
 #: .\templates\ourforum\widgets\lbf_status.html:18
 msgid "Total number of posts"
-msgstr "文章数"
+msgstr "问答计数"
 
 #: .\templatetags\lbforum_filters.py:72
 msgid "Online"
@@ -539,3 +556,32 @@ msgstr "回复"
 #: .\views.py:194
 msgid "you can't reply, this topic closed."
 msgstr "该话题已锁定，无法回复"
+
+#, fuzzy
+#~| msgid "User"
+#~ msgid "Users"
+#~ msgstr "用户"
+
+#~ msgid "板块类别（复数形式）"
+#~ msgstr "板块类别（复数形式）"
+
+#~ msgid "板块"
+#~ msgstr "版块"
+
+#~ msgid "板块（复数形式)"
+#~ msgstr "板块（复数形式)"
+
+#~ msgid "话题类型"
+#~ msgstr "话题类型"
+
+#~ msgid "话题类型（复数形式）"
+#~ msgstr "话题类型（复数形式）"
+
+#~ msgid "话题"
+#~ msgstr "话题"
+
+#~ msgid "用户信息完善"
+#~ msgstr "用户信息完善"
+
+#~ msgid "用户信息完善（复数形式）"
+#~ msgstr "用户信息完善（复数形式）"

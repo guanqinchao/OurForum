@@ -154,7 +154,7 @@ AUTH_PASSWORD_VALIDATORS = [
 #   ('en-us', u'English'),
 #   ('zh-hans',u'简体中文')
 # )
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'zh-hans'
 TIME_ZONE = 'Asia/Shanghai'
 
 USE_I18N = True

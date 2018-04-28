@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-28 16:23+0800\n"
+"POT-Creation-Date: 2018-04-28 18:30+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -48,7 +48,7 @@ msgstr "Last Topic"
 msgid "Order By"
 msgstr "Order By"
 
-#: .\forms.py:56
+#: .\forms.py:56 .\models.py:57 .\models.py:95 .\models.py:113
 msgid "Forum"
 msgstr "Forum"
 
@@ -85,12 +85,12 @@ msgid "Some word in you post is forbidden, please correct it."
 msgstr "Some word in you post is forbidden, please correct it."
 
 #: .\models.py:29
-msgid "板块类别"
-msgstr "Category"
+msgid "Category"
+msgstr ""
 
 #: .\models.py:30
-msgid "板块类别（复数形式）"
-msgstr "Categories"
+msgid "Categories"
+msgstr ""
 
 #: .\models.py:53 .\models.py:131
 #: .\templates\ourforum\inc_topic_detail.html:44
@@ -98,12 +98,8 @@ msgstr "Categories"
 msgid "Last post"
 msgstr "Last post"
 
-#: .\models.py:57 .\models.py:95 .\models.py:113
-msgid "板块"
-msgstr "Forum"
-
-#: .\models.py:58
-msgid "板块（复数形式)"
+#: .\models.py:58 .\templates\ourforum\widgets\categories_and_forums.html:4
+msgid "Forums"
 msgstr "Forums"
 
 #: .\models.py:61
@@ -111,12 +107,16 @@ msgid "Forum-Administrator"
 msgstr "Forum-Administrator"
 
 #: .\models.py:100 .\models.py:115
-msgid "话题类型"
-msgstr "TopicType"
+#, fuzzy
+#| msgid "Topic Type"
+msgid "TopicType"
+msgstr "Topic Type"
 
 #: .\models.py:101
-msgid "话题类型（复数形式）"
-msgstr "TopicTypes"
+#, fuzzy
+#| msgid "Topic Type"
+msgid "TopicTypes"
+msgstr "Topic Type"
 
 #: .\models.py:106
 msgid "Default"
@@ -143,8 +143,10 @@ msgid "Html"
 msgstr "Html"
 
 #: .\models.py:181
-msgid "话题"
-msgstr "Topic"
+#, fuzzy
+#| msgid "Topics"
+msgid "Topic"
+msgstr "Topics"
 
 #: .\models.py:202 .\templates\ourforum\profile\inc_base_profile.html:28
 #: .\templates\ourforum\topic.html:110
@@ -169,7 +171,7 @@ msgstr "Female"
 msgid "Male"
 msgstr "Male"
 
-#: .\models.py:253
+#: .\models.py:253 .\models.py:305
 msgid "User"
 msgstr "User"
 
@@ -182,12 +184,30 @@ msgid "Avatar"
 msgstr "Avatar"
 
 #: .\models.py:262
-msgid "用户信息完善"
-msgstr "Profile"
+msgid "UserProfile"
+msgstr ""
 
 #: .\models.py:263
-msgid "用户信息完善（复数形式）"
-msgstr "Profiles"
+msgid "UserProfiles"
+msgstr ""
+
+#: .\models.py:331
+#, fuzzy
+#| msgid "Message"
+msgid "Messages"
+msgstr "Message"
+
+#: .\models.py:346
+#, fuzzy
+#| msgid "Friend Links"
+msgid "FriendApplications"
+msgstr "FriendApplications"
+
+#: .\models.py:364
+#, fuzzy
+#| msgid "Topics"
+msgid "Notices"
+msgstr "Topics"
 
 #: .\templates\ourforum\forum.html:19
 msgid "Forum Description"
@@ -297,6 +317,10 @@ msgstr "views"
 #: .\templates\ourforum\index.html:17
 msgid "Friend Links"
 msgstr "Friend Links"
+
+#: .\templates\ourforum\index.html:30
+msgid "Hi,Welcome to "
+msgstr ""
 
 #: .\templates\ourforum\index.html:38
 msgid "More"
@@ -485,10 +509,6 @@ msgstr "No Reply"
 msgid "Quick reply to this topic"
 msgstr "Quick reply to this topic"
 
-#: .\templates\ourforum\widgets\categories_and_forums.html:4
-msgid "Forums"
-msgstr "Forums"
-
 #: .\templates\ourforum\widgets\lbf_status.html:4
 msgid "Forum Status"
 msgstr "Forum Status"
@@ -537,3 +557,35 @@ msgstr "reply"
 #: .\views.py:194
 msgid "you can't reply, this topic closed."
 msgstr "you can't reply, this topic closed."
+
+#, fuzzy
+#~| msgid "User"
+#~ msgid "Users"
+#~ msgstr "User"
+
+#~ msgid "板块类别"
+#~ msgstr "板块类别"
+
+#~ msgid "板块类别（复数形式）"
+#~ msgstr "板块类别（复数形式）"
+
+#~ msgid "板块"
+#~ msgstr "Forum"
+
+#~ msgid "板块（复数形式)"
+#~ msgstr "Forums"
+
+#~ msgid "话题类型"
+#~ msgstr "TopicType"
+
+#~ msgid "话题类型（复数形式）"
+#~ msgstr "TopicTypes"
+
+#~ msgid "话题"
+#~ msgstr "Topic"
+
+#~ msgid "用户信息完善"
+#~ msgstr "Profile"
+
+#~ msgid "用户信息完善（复数形式）"
+#~ msgstr "Profiles"

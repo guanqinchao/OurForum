@@ -37,7 +37,7 @@ def set_language(request):
     """
     next = request.POST.get('next', request.GET.get('next'))
     if not is_safe_url(url=next, host=request.get_host()):
-        next = request.META.get('HTTP_REFERER')#using http://127.0.0.1:8000/
+        next = request.META.get('http://127.0.0.1:8000/')#using http://127.0.0.1:8000/
         if not is_safe_url(url=next, host=request.get_host()):
             next = '/'
     response = http.HttpResponseRedirect(next)#next is http://127.0.0.1:8000/

@@ -26,8 +26,8 @@ class Category(models.Model):
 
     class Meta:
         db_table = 'category'
-        verbose_name = _(u"板块类别")
-        verbose_name_plural = _(u"板块类别（复数形式）")
+        verbose_name = _(u"Category")
+        verbose_name_plural = _(u"Categories")
         ordering = ('-oid', 'created_on')
 
     def __str__(self):
@@ -40,7 +40,7 @@ class Forum(models.Model):
     slug = models.SlugField(max_length=110)
     description = models.TextField(default='')
     oid = models.PositiveIntegerField(default=999)
-    category = models.ForeignKey(Category,verbose_name=u"板块类别")
+    category = models.ForeignKey(Category,verbose_name=u"Category")
     admins = models.ManyToManyField(settings.AUTH_USER_MODEL, blank=True)
 
     created_on = models.DateTimeField(auto_now_add=True)
@@ -54,8 +54,8 @@ class Forum(models.Model):
         blank=True, null=True)
 
     class Meta:
-        verbose_name = _(u"板块")
-        verbose_name_plural = _(u"板块（复数形式)")
+        verbose_name = _(u"Forum")
+        verbose_name_plural = _(u"Forums")
         ordering = ('oid', '-created_on')
         permissions = (
             ("sft_mgr_forum", _("Forum-Administrator")),
@@ -92,13 +92,13 @@ class Forum(models.Model):
 
 @python_2_unicode_compatible
 class TopicType(models.Model):
-    forum = models.ForeignKey(Forum, verbose_name=_(u'板块'))
+    forum = models.ForeignKey(Forum, verbose_name=_(u'Forum'))
     name = models.CharField(max_length=100)
     slug = models.SlugField(max_length=100)
     description = models.TextField(blank=True)
     class Meta:
-        verbose_name = _(u"话题类型")
-        verbose_name_plural = _(u"话题类型（复数形式）")
+        verbose_name = _(u"TopicType")
+        verbose_name_plural = _(u"TopicTypes")
     def __str__(self):
         return self.name
 
@@ -110,9 +110,9 @@ LEVEL_CHOICES = (
 
 @python_2_unicode_compatible
 class Topic(models.Model):
-    forum = models.ForeignKey(Forum, verbose_name=_(u'板块'))
+    forum = models.ForeignKey(Forum, verbose_name=_(u'Forum'))
     topic_type = models.ForeignKey(
-        TopicType, verbose_name=_(u'话题类型'),
+        TopicType, verbose_name=_(u'TopicType'),
         blank=True, null=True)
     posted_by = models.ForeignKey(settings.AUTH_USER_MODEL)
 
@@ -144,8 +144,8 @@ class Topic(models.Model):
     class Meta:
         ordering = ('-last_reply_on',)  # '-sticky'
         get_latest_by = ('created_on')
-        verbose_name = '话题'
-        verbose_name_plural = '话题（复数形式)'
+        verbose_name = 'Topic'
+        verbose_name_plural = 'Topics'
 
     def __str__(self):
         return self.subject
@@ -178,7 +178,7 @@ class Post(models.Model):
         ('markdown', _('Markdown')),
         ('html', _('Html')),
     )
-    topic = models.ForeignKey(Topic, verbose_name=_(u'话题'), related_name='posts')
+    topic = models.ForeignKey(Topic, verbose_name=_(u'Topic'), related_name='posts')
     posted_by = models.ForeignKey(settings.AUTH_USER_MODEL)
     poster_ip = models.GenericIPAddressField()
     topic_post = models.BooleanField(default=False)
@@ -259,8 +259,8 @@ class OurForumUserProfile(models.Model):
     sex = models.CharField(max_length=20, default='M', choices=SEX_CHOICES)
     class Meta:
         db_table = 'userprofile'
-        verbose_name = _(u"用户信息完善")
-        verbose_name_plural = _(u"用户信息完善（复数形式）")
+        verbose_name = _(u"UserProfile")
+        verbose_name_plural = _(u"UserProfiles")
     def __str__(self):
         return self.nickname or self.user.username
 
@@ -302,7 +302,7 @@ class LoginUser(AbstractUser):
 
     class Meta:
         db_table = 'loginuser'
-        verbose_name_plural = u'用户'
+        verbose_name_plural = _(u"User")
         ordering = ['-date_joined']
 
     def __unicode__(self):
@@ -328,7 +328,7 @@ class Message(models.Model):  # 好友消息
 
     class Meta:
         db_table = 'message'
-        verbose_name_plural = u'消息'
+        verbose_name_plural = _(u"Messages")
 
 
 class Application(models.Model):  # 好友申请
@@ -343,7 +343,7 @@ class Application(models.Model):  # 好友申请
 
     class Meta:
         db_table = 'application'
-        verbose_name_plural = u'好友申请'
+        verbose_name_plural = _(u"FriendApplications")
 
 
 class Notice(models.Model):
@@ -361,7 +361,7 @@ class Notice(models.Model):
     class Meta:
         db_table = 'notice'
         ordering = ['-created_at']
-        verbose_name_plural = u'通知'
+        verbose_name_plural = _(u"Notices")
 
     def __str__(self):
         return u"%s的事件: %s" % (self.sender, self.description())
