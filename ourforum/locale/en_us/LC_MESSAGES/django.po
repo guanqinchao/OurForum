@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-28 18:30+0800\n"
+"POT-Creation-Date: 2018-05-02 00:42+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -52,7 +52,7 @@ msgstr "Order By"
 msgid "Forum"
 msgstr "Forum"
 
-#: .\forms.py:57 .\templates\ourforum\forum.html:50
+#: .\forms.py:57 .\templates\ourforum\forum.html:51
 msgid "Topic Type"
 msgstr "Topic Type"
 
@@ -126,139 +126,147 @@ msgstr "Default"
 msgid "Distillate"
 msgstr "Distillate"
 
-#: .\models.py:120 .\models.py:201
+#: .\models.py:120 .\models.py:210
 msgid "Post"
 msgstr "Post"
 
-#: .\models.py:177
+#: .\models.py:186
 msgid "BBCode"
 msgstr "BBCode"
 
-#: .\models.py:178
+#: .\models.py:187
 msgid "Markdown"
 msgstr "Markdown"
 
-#: .\models.py:179
+#: .\models.py:188
 msgid "Html"
 msgstr "Html"
 
-#: .\models.py:181
+#: .\models.py:190
 #, fuzzy
 #| msgid "Topics"
 msgid "Topic"
 msgstr "Topics"
 
-#: .\models.py:202 .\templates\ourforum\profile\inc_base_profile.html:28
+#: .\models.py:211 .\templates\ourforum\profile\inc_base_profile.html:34
 #: .\templates\ourforum\topic.html:110
 msgid "Posts"
 msgstr "Posts"
 
-#: .\models.py:211
+#: .\models.py:220
 #, python-format
 msgid "Topic: %s"
 msgstr "Topic: %s"
 
-#: .\models.py:212
+#: .\models.py:221
 #, python-format
 msgid "Re: %s"
 msgstr "Re: %s"
 
-#: .\models.py:248
+#: .\models.py:257
 msgid "Female"
 msgstr "Female"
 
-#: .\models.py:249
+#: .\models.py:258
 msgid "Male"
 msgstr "Male"
 
-#: .\models.py:253 .\models.py:305
+#: .\models.py:262 .\models.py:315
 msgid "User"
 msgstr "User"
 
-#: .\models.py:255 .\templates\ourforum\profile\change_profile.html:57
+#: .\models.py:264 .\templates\ourforum\profile\change_profile.html:57
 msgid "Nickname"
 msgstr "Nickname"
 
-#: .\models.py:256 .\templates\ourforum\profile\change_profile.html:49
+#: .\models.py:265 .\templates\ourforum\profile\change_profile.html:49
 msgid "Avatar"
 msgstr "Avatar"
 
-#: .\models.py:262
+#: .\models.py:272
 msgid "UserProfile"
 msgstr ""
 
-#: .\models.py:263
+#: .\models.py:273
 msgid "UserProfiles"
 msgstr ""
 
-#: .\models.py:331
+#: .\models.py:341 .\templates\ourforum\inc_header.html:11
 #, fuzzy
 #| msgid "Message"
 msgid "Messages"
 msgstr "Message"
 
-#: .\models.py:346
+#: .\models.py:356
 #, fuzzy
 #| msgid "Friend Links"
 msgid "FriendApplications"
 msgstr "FriendApplications"
 
-#: .\models.py:364
+#: .\models.py:374
 #, fuzzy
 #| msgid "Topics"
 msgid "Notices"
 msgstr "Topics"
 
-#: .\templates\ourforum\forum.html:19
+#: .\templates\ourforum\form.html:23
+msgid "给好友发消息~"
+msgstr ""
+
+#: .\templates\ourforum\form.html:33
+msgid "~给好友发消息~"
+msgstr ""
+
+#: .\templates\ourforum\forum.html:20
 msgid "Forum Description"
 msgstr "Forum Description"
 
-#: .\templates\ourforum\forum.html:31
+#: .\templates\ourforum\forum.html:32
 msgid "Forum Admin"
 msgstr "Forum Admin"
 
-#: .\templates\ourforum\forum.html:55 .\templates\ourforum\forum.html:98
+#: .\templates\ourforum\forum.html:56 .\templates\ourforum\forum.html:99
 msgid "All"
 msgstr "All"
 
-#: .\templates\ourforum\forum.html:78
-#: .\templates\ourforum\profile\inc_base_profile.html:25
+#: .\templates\ourforum\forum.html:79
+#: .\templates\ourforum\profile\inc_base_profile.html:31
 msgid "Topics"
 msgstr "Topics"
 
-#: .\templates\ourforum\forum.html:85
+#: .\templates\ourforum\forum.html:86
 #: .\templates\ourforum\plugins\inc_header_left_links.html:3
 #: .\templates\ourforum\recent.html:24 .\templates\ourforum\topic.html:33
 msgid "Home"
 msgstr "Home"
 
-#: .\templates\ourforum\forum.html:92 .\templates\ourforum\index.html:32
+#: .\templates\ourforum\forum.html:93 .\templates\ourforum\index.html:33
 msgid "Post new topic"
 msgstr "Post new topic"
 
-#: .\templates\ourforum\forum.html:101
+#: .\templates\ourforum\forum.html:102
 msgid "Distillate District"
 msgstr "Distillate District"
 
-#: .\templates\ourforum\inc_header.html:11
+#: .\templates\ourforum\inc_header.html:12
 msgid "My profile"
 msgstr "My profile"
 
-#: .\templates\ourforum\inc_header.html:12
+#: .\templates\ourforum\inc_header.html:13
 msgid "Logout"
 msgstr "Logout"
 
-#: .\templates\ourforum\inc_header.html:14
+#: .\templates\ourforum\inc_header.html:15
 #: .\templates\ourforum\widgets\cur_user_profile.html:42
 msgid "Sign Up"
 msgstr "Sign Up"
 
-#: .\templates\ourforum\inc_header.html:15
+#: .\templates\ourforum\inc_header.html:16
 #: .\templates\ourforum\widgets\cur_user_profile.html:45
 msgid "Login"
 msgstr "Login"
 
-#: .\templates\ourforum\inc_header.html:28
+#: .\templates\ourforum\inc_header.html:29
 msgid "Search"
 msgstr "Search"
 
@@ -314,21 +322,49 @@ msgstr "Hided"
 msgid "views"
 msgstr "views"
 
-#: .\templates\ourforum\index.html:17
+#: .\templates\ourforum\index.html:18
 msgid "Friend Links"
 msgstr "Friend Links"
 
-#: .\templates\ourforum\index.html:30
+#: .\templates\ourforum\index.html:31
 msgid "Hi,Welcome to "
-msgstr ""
+msgstr "Hi,Welcome to"
 
-#: .\templates\ourforum\index.html:38
+#: .\templates\ourforum\index.html:39
 msgid "More"
 msgstr "More"
+
+#: .\templates\ourforum\index.html:42
+msgid "Back To Top"
+msgstr ""
 
 #: .\templates\ourforum\markitup_preview.html:11
 msgid "preview"
 msgstr "preview"
+
+#: .\templates\ourforum\notice_list.html:12
+msgid "My Friend："
+msgstr ""
+
+#: .\templates\ourforum\notice_list.html:14
+#, fuzzy
+#| msgid "Message"
+msgid "Send Message"
+msgstr "Message"
+
+#: .\templates\ourforum\notice_list.html:19
+#, fuzzy
+#| msgid "Topics"
+msgid "Notice:"
+msgstr "Topics"
+
+#: .\templates\ourforum\notice_list.html:22
+msgid "Agree"
+msgstr ""
+
+#: .\templates\ourforum\notice_list.html:22
+msgid "Disagree"
+msgstr ""
 
 #: .\templates\ourforum\plugins\inc_header_left_links.html:6
 msgid "Blog"
@@ -352,7 +388,7 @@ msgid "Please correct the errors below."
 msgstr "Please correct the errors below."
 
 #: .\templates\ourforum\post.html:88
-#: .\templates\ourforum\profile\change_profile.html:197
+#: .\templates\ourforum\profile\change_profile.html:199
 #: .\templates\ourforum\topic.html:140
 msgid "Submit"
 msgstr "Submit"
@@ -369,22 +405,22 @@ msgstr "submit"
 msgid "Pages"
 msgstr "Pages"
 
-#: .\templates\ourforum\profile\base.html:12
+#: .\templates\ourforum\profile\base.html:11
 #: .\templates\ourforum\profile\change_profile.html:66
 msgid "Bio"
 msgstr "Bio"
 
-#: .\templates\ourforum\profile\base.html:25
-#: .\templates\ourforum\profile\base.html:27
+#: .\templates\ourforum\profile\base.html:24
+#: .\templates\ourforum\profile\base.html:26
 msgid "Introduction"
 msgstr "Introduction"
 
-#: .\templates\ourforum\profile\base.html:32
+#: .\templates\ourforum\profile\base.html:31
 #: .\templates\ourforum\profile\change_profile.html:33
 msgid "Change profile"
 msgstr "Change profile"
 
-#: .\templates\ourforum\profile\base.html:35
+#: .\templates\ourforum\profile\base.html:34
 msgid "Change password"
 msgstr "Change password"
 
@@ -397,7 +433,7 @@ msgstr "Change %(view_user.lbforum_profile)s's profile"
 msgid "birthday"
 msgstr "birthday"
 
-#: .\templates\ourforum\profile\change_profile.html:186
+#: .\templates\ourforum\profile\change_profile.html:188
 msgid "Sex"
 msgstr "Sex"
 
@@ -406,11 +442,15 @@ msgstr "Sex"
 msgid "Joined on"
 msgstr "Joined on"
 
-#: .\templates\ourforum\profile\inc_base_profile.html:33
+#: .\templates\ourforum\profile\inc_base_profile.html:25
+msgid "levels："
+msgstr ""
+
+#: .\templates\ourforum\profile\inc_base_profile.html:39
 msgid "View all topics"
 msgstr "View all topics"
 
-#: .\templates\ourforum\profile\inc_base_profile.html:36
+#: .\templates\ourforum\profile\inc_base_profile.html:42
 msgid "View all posts"
 msgstr "View all posts"
 
@@ -542,19 +582,19 @@ msgstr "%s ago"
 msgid "reply to see the attachments"
 msgstr "reply to see the attachments"
 
-#: .\views.py:149 .\views.py:242 .\views.py:272 .\views.py:283 .\views.py:298
+#: .\views.py:152 .\views.py:245 .\views.py:275 .\views.py:286 .\views.py:301
 msgid "no right"
 msgstr "no right"
 
-#: .\views.py:184 .\views.py:244
+#: .\views.py:187 .\views.py:247
 msgid "topic"
 msgstr "topic"
 
-#: .\views.py:190 .\views.py:239
+#: .\views.py:193 .\views.py:242
 msgid "reply"
 msgstr "reply"
 
-#: .\views.py:194
+#: .\views.py:197
 msgid "you can't reply, this topic closed."
 msgstr "you can't reply, this topic closed."
 

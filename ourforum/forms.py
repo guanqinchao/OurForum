@@ -6,7 +6,7 @@ from datetime import datetime
 from django import forms
 from django.utils.translation import ugettext_lazy as _
 from constance import config
-from .models import Topic, Post, TopicType
+from .models import Topic, Post, TopicType,Notice
 from .models import OurForumUserProfile
 from .models import Forum
 from .models import Category
@@ -194,4 +194,11 @@ class ProfileForm(forms.ModelForm):
     class Meta:
         model = OurForumUserProfile
         fields = ('avatar', 'nickname', 'signature', 'bio','birthday','sex')
+from ourforum.models import Message
+
+class MessageForm(forms.ModelForm):
+
+    class Meta:
+        model = Message
+        fields = ('content',)
 

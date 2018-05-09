@@ -1,5 +1,4 @@
-{% extends "ourforum/base_site.html" %}
-
+{% extends "ourforum/index.html" %}
 {% load i18n %}
 {% load lbforum_tags %}
 {% load lbforum_filters %}
@@ -41,7 +40,7 @@
 {% endblock %}
 
 {% block footer_js %}
-  <script type="text/javascript" src="{% static 'jquery/dist/jquery.min.js' %}"></script>
+  <script type="text/javascript" src="{% static 'ourforum/js/jquery-1.12.4.js' %}"></script>
   <script type="text/javascript">
     $('.user-bio a').attr({ target: "_blank" });
   </script>

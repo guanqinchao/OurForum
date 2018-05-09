@@ -476,8 +476,10 @@ class DefaultAccountAdapter(object):
 
     def authenticate(self, request, **credentials):
         """Only authenticates, does not actually login. See `login`"""
+        # print(**credentials)
         self.pre_authenticate(request, **credentials)
-        user = authenticate(request, **credentials)
+        user = authenticate(**credentials)
+
         if user:
             cache_key = self._get_login_attempts_cache_key(
                 request, **credentials)

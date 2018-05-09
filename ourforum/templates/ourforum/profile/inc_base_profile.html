@@ -20,6 +20,12 @@
             <div class="sep10"></div>
             <table width="100%" cellspacing="0" cellpadding="2" border="0">
               <tbody>
+               <tr>
+                  <td width="50%">
+                    {% trans "levels：" %}: <strong>{{ view_user.levels }}</strong>
+                  </td>
+
+                </tr>
                 <tr>
                   <td width="50%">
                     {% trans "Topics" %}: <strong>{{ view_user.topic_set.all.count }}</strong>

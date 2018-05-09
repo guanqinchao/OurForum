@@ -8,6 +8,7 @@
       <ul>
         {% include 'ourforum/plugins/inc_header_left_links.html' %}
         {% if user.is_authenticated %}
+          <li id="navmessage"><a href="{% url 'show_notice' %}" hidefocus="true" >{% trans "Messages" %}({%if message_number %}{{message_number}}{%else%}2{%endif%})</a></li>
           <li id="navprofile"><a href="{% url 'lbforum_profile' %}">{% trans "My profile" %}</a></li>
           <li id="navlogout"><a href="{% get_setting 'LOGOUT_URL' %}?next={% url 'lbforum_index' %}">{% trans "Logout" %}</a></li>
         {% else %}

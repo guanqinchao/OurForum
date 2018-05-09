@@ -1,0 +1,31 @@
+{% extends 'ourforum/profile/base.html' %}
+
+{% load i18n %}
+{% load lbforum_filters %}
+{% load lbforum_tags %}
+{% block content_content %}
+<div class="box">
+  <!--<div class="inner">-->
+     <table cellspacing="0" cellpadding="5" border="0">
+      <tbody>
+
+{% trans "My Friend：" %}
+{% for friend in myfriends %}
+   {{ friend.username }}|<a href="{% url 'send_message' friend.pk %}">{% trans "Send Message" %}</a>;
+{% endfor %}
+<br>
+
+
+{% trans "Notice:" %}<br>
+{% for notice in notice_list %}
+	{% ifequal notice.type 2 %}
+		{{ notice }} <a href="{% url 'friend_agree' notice.pk 1 %}">{% trans "Agree" %}</a>|<a href="{% url 'friend_agree' notice.pk 2 %}">{% trans "Disagree" %}</a><br>
+	{% else %}
+		<a href="{% url 'notice_detail' notice.pk %}">{{ notice }}</a><br>
+	{% endifequal %}
+
+{% endfor %}
+  </tbody>
+    </table>
+     </div>
+{% endblock %}

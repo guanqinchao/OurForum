@@ -170,6 +170,15 @@ class Topic(models.Model):
         if commit:
             self.save()
 
+class Up(models.Model):
+    """
+    记录赞表
+    """
+
+    post = models.ForeignKey(verbose_name='发言', to='Topic', to_field='id', on_delete=models.CASCADE)
+    user = models.ForeignKey(verbose_name='赞用户', to='LoginUser', to_field='id', on_delete=models.CASCADE)
+    up = models.BooleanField(verbose_name='是否赞')
+
 
 @python_2_unicode_compatible
 class Post(models.Model):
@@ -254,8 +263,9 @@ class OurForumUserProfile(models.Model):
     nickname = models.CharField(
         _("Nickname"), max_length=255, blank=False, default='')
     avatar = ThumbnailerImageField(_("Avatar"), upload_to='imgs/avatars', blank=True, null=True)
-    bio = models.TextField(blank=True)
+    bio = models.TextField(blank=True,max_length=255)
     birthday = models.DateField(verbose_name=u'生日', null=True, blank=True)
+
     sex = models.CharField(max_length=20, default='M', choices=SEX_CHOICES)
     class Meta:
         db_table = 'userprofile'
@@ -320,8 +330,8 @@ class Message(models.Model):  # 好友消息
     sender = models.ForeignKey(settings.AUTH_USER_MODEL, related_name='message_sender')  # 发送者
     receiver = models.ForeignKey(settings.AUTH_USER_MODEL, related_name='message_receiver')  # 接收者
     content = models.TextField()
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
+    created_on = models.DateTimeField(auto_now_add=True, blank=True)
+    updated_on = models.DateTimeField(blank=True, null=True, auto_now_add=True)
 
     def description(self):
         return u'%s 给你发送了消息《%s》' % (self.sender, self.content)
@@ -335,8 +345,8 @@ class Application(models.Model):  # 好友申请
     sender = models.ForeignKey(settings.AUTH_USER_MODEL, related_name='appli_sender')  # 发送者
     receiver = models.ForeignKey(settings.AUTH_USER_MODEL, related_name='appli_receiver')  # 接收者
     status = models.IntegerField(default=0)  # 申请状态 0:未查看 1:同意 2:不同意
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
+    created_on = models.DateTimeField(auto_now_add=True, blank=True)
+    updated_on = models.DateTimeField(blank=True, null=True, auto_now_add=True)
 
     def description(self):
         return u'%s 申请加好友' % self.sender
@@ -355,12 +365,12 @@ class Notice(models.Model):
 
     status = models.BooleanField(default=False)  # 是否阅读
     type = models.IntegerField()  # 通知类型 0:评论 1:好友消息 2:好友申请
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
+    created_on = models.DateTimeField(auto_now_add=True, blank=True)
+    updated_on = models.DateTimeField(blank=True, null=True,auto_now_add=True)
 
     class Meta:
         db_table = 'notice'
-        ordering = ['-created_at']
+        ordering = ['-created_on']
         verbose_name_plural = _(u"Notices")
 
     def __str__(self):
@@ -378,7 +388,7 @@ class Notice(models.Model):
 
 def comment_save(sender, instance, signal, *args, **kwargs):
     entity = instance
-    if str(entity.created_at)[:19] == str(entity.updated_at)[:19]:
+    if str(entity.created_on)[:19] == str(entity.updated_on)[:19]:
         if entity.author != entity.post.author:  # 作者的回复不给作者通知
             event = Notice(sender=entity.author, receiver=entity.post.author, event=entity, type=0)
             event.save()
@@ -390,14 +400,14 @@ def comment_save(sender, instance, signal, *args, **kwargs):
 
 def application_save(sender, instance, signal, *args, **kwargs):
     entity = instance
-    if str(entity.created_at)[:19] == str(entity.updated_at)[:19]:
+    if str(entity.created_on)[:19] == str(entity.updated_on)[:19]:
         event = Notice(sender=entity.sender, receiver=entity.receiver, event=entity, type=1)
         event.save()
 
 
 def message_save(sender, instance, signal, *args, **kwargs):
     entity = instance
-    if str(entity.created_at)[:19] == str(entity.updated_at)[:19]:
+    if str(entity.created_on)[:19] == str(entity.updated_on)[:19]:
         event = Notice(sender=entity.sender, receiver=entity.receiver, event=entity, type=2)
         event.save()
 

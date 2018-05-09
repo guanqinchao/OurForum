@@ -6,7 +6,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="{{ LANGUAGE_CODE }}" xml:lang="{{ LANGUAGE_CODE }}" {% if LANGUAGE_BIDI %}dir="rtl"{% endif %}/>
 {% endblock %}
   <head>
-    <link rel="shortcut icon" href="/static/ourforum/imgs/favicon.ico">
+     <link rel="shortcut icon" href="/static/admin/img/favicon.ico">
+<link rel="stylesheet" href="/static/ourforum/styles/v2ex/default.css"/>
+    <!--<link rel="bookmark"  type="image/x-icon"  href="./imgs/favicon.ico"/>-->
+
+
     <title>
       {% get_setting "OURFORUM_TITLE" %}
       -
@@ -18,7 +22,12 @@
   </head>
 
   <body>
+
     {% block content %} {% endblock %}
     {% block footer_js %} {% endblock %}
+  <!--回到顶部-->
+   <!--<div id="back-to-top" class="red" data-scroll="body" style="top:-46px;color:red;">回到顶部 </div>-->
+      <!--<script src="jquery-1.12.4.js"></script>-->
+  <!--<script type="text/javascript" src="home.js"></script>-->
   </body>
 </html>

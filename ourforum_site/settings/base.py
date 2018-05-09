@@ -67,6 +67,7 @@ INSTALLED_APPS = [
     'ourforum',
     'lbattachment',
     'lbutils',
+    'likes',
 ]
 
 
@@ -171,7 +172,7 @@ LANGUAGE_COOKIE_NAME = "sessionid"  # Session的cookie保存在浏览器上时�
 LANGUAGE_COOKIE_DOMAIN = None    # Session的cookie保存的域名（默认）
 LANGUAGE_COOKIE_PATH = "/"    # Session的cookie保存的路径（默认）
 
-LANGUAGE_COOKIE_AGE = 1209600    # Session的cookie失效日期（2周）（默认）
+LANGUAGE_COOKIE_AGE = 12    # Session的cookie失效日期（2周）（默认）1209600
 
 # 翻译文件所在目录，需要手工创建
 LOCALE_PATHS = (
@@ -181,7 +182,7 @@ LOCALE_PATHS = (
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(PRJ_ROOT, 'collectedstatic')
+STATIC_ROOT = os.path.join(PRJ_ROOT, 'static')
 
 HOST_URL = ''
 MEDIA_URL_ = '/media/'
@@ -207,8 +208,8 @@ BOWER_INSTALLED_APPS = (
 )
 
 STATICFILES_FINDERS += (('djangobower.finders.BowerFinder'),)
-AUTHENTICATION_BACKENDS += ( ('ourforum_site.views.CustomBackend',))
-
+# AUTHENTICATION_BACKENDS += ( ('ourforum_site.views.AuthBackend',))
+AUTHENTICATION_BACKENDS += (('allauth.account.auth_backends.AuthenticationBackend'),)
 SITE_ID = 1
 
 ACCOUNT_FORMS = {'signup': 'ourforum_site.forms.SignupForm'}
@@ -231,3 +232,11 @@ REST_FRAMEWORK = {
     ],
     'PAGE_SIZE': 20
 }
+# 邮件配置
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.sina.cn'
+EMAIL_PORT = 25
+EMAIL_HOST_USER = '18850004329@sina.cn'
+EMAIL_HOST_PASSWORD = 'AAAaaa123'
+# 注册有效期天数
+CONFIRM_DAYS = 7

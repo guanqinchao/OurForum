@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-28 18:30+0800\n"
+"POT-Creation-Date: 2018-05-02 00:47+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -52,7 +52,7 @@ msgstr "排序方式"
 msgid "Forum"
 msgstr "版块"
 
-#: .\forms.py:57 .\templates\ourforum\forum.html:50
+#: .\forms.py:57 .\templates\ourforum\forum.html:51
 msgid "Topic Type"
 msgstr "话题类型"
 
@@ -126,138 +126,146 @@ msgstr "默认"
 msgid "Distillate"
 msgstr "精华"
 
-#: .\models.py:120 .\models.py:201
+#: .\models.py:120 .\models.py:210
 msgid "Post"
 msgstr "问答"
 
-#: .\models.py:177
+#: .\models.py:186
 msgid "BBCode"
 msgstr "BBCode"
 
-#: .\models.py:178
+#: .\models.py:187
 msgid "Markdown"
 msgstr "Markdown"
 
-#: .\models.py:179
+#: .\models.py:188
 msgid "Html"
 msgstr "Html"
 
-#: .\models.py:181
+#: .\models.py:190
 #, fuzzy
 #| msgid "Topics"
 msgid "Topic"
 msgstr "话题（复数）"
 
-#: .\models.py:202 .\templates\ourforum\profile\inc_base_profile.html:28
+#: .\models.py:211 .\templates\ourforum\profile\inc_base_profile.html:34
 #: .\templates\ourforum\topic.html:110
 msgid "Posts"
 msgstr "问答(复数)"
 
-#: .\models.py:211
+#: .\models.py:220
 #, python-format
 msgid "Topic: %s"
 msgstr "话题: %s"
 
-#: .\models.py:212
+#: .\models.py:221
 #, python-format
 msgid "Re: %s"
 msgstr "回复: %s"
 
-#: .\models.py:248
+#: .\models.py:257
 msgid "Female"
 msgstr "女"
 
-#: .\models.py:249
+#: .\models.py:258
 msgid "Male"
 msgstr "男"
 
-#: .\models.py:253 .\models.py:305
+#: .\models.py:262 .\models.py:315
 msgid "User"
 msgstr "用户"
 
-#: .\models.py:255 .\templates\ourforum\profile\change_profile.html:57
+#: .\models.py:264 .\templates\ourforum\profile\change_profile.html:57
 msgid "Nickname"
 msgstr "昵称"
 
-#: .\models.py:256 .\templates\ourforum\profile\change_profile.html:49
+#: .\models.py:265 .\templates\ourforum\profile\change_profile.html:49
 msgid "Avatar"
 msgstr "头像"
 
-#: .\models.py:262
+#: .\models.py:272
 msgid "UserProfile"
 msgstr "用户信息"
 
-#: .\models.py:263
+#: .\models.py:273
 msgid "UserProfiles"
 msgstr "用户信息（复数）"
 
-#: .\models.py:331
+#: .\models.py:341 .\templates\ourforum\inc_header.html:11
 #, fuzzy
 #| msgid "Message"
 msgid "Messages"
 msgstr "内容"
 
-#: .\models.py:346
+#: .\models.py:356
 #, fuzzy
 msgid "FriendApplications"
 msgstr "好友申请"
 
-#: .\models.py:364
+#: .\models.py:374
 #, fuzzy
 #| msgid "Topics"
 msgid "Notices"
 msgstr "通知（复数）"
 
-#: .\templates\ourforum\forum.html:19
+#: .\templates\ourforum\form.html:23
+msgid "给好友发消息~"
+msgstr ""
+
+#: .\templates\ourforum\form.html:33
+msgid "~给好友发消息~"
+msgstr ""
+
+#: .\templates\ourforum\forum.html:20
 msgid "Forum Description"
 msgstr "版块说明"
 
-#: .\templates\ourforum\forum.html:31
+#: .\templates\ourforum\forum.html:32
 msgid "Forum Admin"
 msgstr "版块管理员"
 
-#: .\templates\ourforum\forum.html:55 .\templates\ourforum\forum.html:98
+#: .\templates\ourforum\forum.html:56 .\templates\ourforum\forum.html:99
 msgid "All"
 msgstr "所有"
 
-#: .\templates\ourforum\forum.html:78
-#: .\templates\ourforum\profile\inc_base_profile.html:25
+#: .\templates\ourforum\forum.html:79
+#: .\templates\ourforum\profile\inc_base_profile.html:31
 msgid "Topics"
 msgstr "话题（复数）"
 
-#: .\templates\ourforum\forum.html:85
+#: .\templates\ourforum\forum.html:86
 #: .\templates\ourforum\plugins\inc_header_left_links.html:3
 #: .\templates\ourforum\recent.html:24 .\templates\ourforum\topic.html:33
 msgid "Home"
 msgstr "首页"
 
-#: .\templates\ourforum\forum.html:92 .\templates\ourforum\index.html:32
+#: .\templates\ourforum\forum.html:93 .\templates\ourforum\index.html:33
 msgid "Post new topic"
 msgstr "发表新话题"
 
-#: .\templates\ourforum\forum.html:101
+#: .\templates\ourforum\forum.html:102
 msgid "Distillate District"
 msgstr "精华区"
 
-#: .\templates\ourforum\inc_header.html:11
+#: .\templates\ourforum\inc_header.html:12
 msgid "My profile"
 msgstr "个人信息"
 
-#: .\templates\ourforum\inc_header.html:12
+#: .\templates\ourforum\inc_header.html:13
 msgid "Logout"
 msgstr "退出"
 
-#: .\templates\ourforum\inc_header.html:14
+#: .\templates\ourforum\inc_header.html:15
 #: .\templates\ourforum\widgets\cur_user_profile.html:42
 msgid "Sign Up"
 msgstr "注册"
 
-#: .\templates\ourforum\inc_header.html:15
+#: .\templates\ourforum\inc_header.html:16
 #: .\templates\ourforum\widgets\cur_user_profile.html:45
 msgid "Login"
 msgstr "登录"
 
-#: .\templates\ourforum\inc_header.html:28
+#: .\templates\ourforum\inc_header.html:29
 msgid "Search"
 msgstr "搜索"
 
@@ -313,23 +321,45 @@ msgstr "隐藏"
 msgid "views"
 msgstr "查看"
 
-#: .\templates\ourforum\index.html:17
+#: .\templates\ourforum\index.html:18
 msgid "Friend Links"
 msgstr "友情链接"
 
-#: .\templates\ourforum\index.html:30
-#, fuzzy
-#| msgid "Hi,Welcome to"
+#: .\templates\ourforum\index.html:31
 msgid "Hi,Welcome to "
 msgstr "您好，欢迎来到 "
 
-#: .\templates\ourforum\index.html:38
+#: .\templates\ourforum\index.html:39
 msgid "More"
 msgstr "更多"
+
+#: .\templates\ourforum\index.html:42
+msgid "Back To Top"
+msgstr "点击回到顶部"
 
 #: .\templates\ourforum\markitup_preview.html:11
 msgid "preview"
 msgstr "预览"
+
+#: .\templates\ourforum\notice_list.html:12
+msgid "My Friend："
+msgstr "我的好友："
+
+#: .\templates\ourforum\notice_list.html:14
+msgid "Send Message"
+msgstr "发消息"
+
+#: .\templates\ourforum\notice_list.html:19
+msgid "Notice:"
+msgstr "通知（复数）"
+
+#: .\templates\ourforum\notice_list.html:22
+msgid "Agree"
+msgstr "同意"
+
+#: .\templates\ourforum\notice_list.html:22
+msgid "Disagree"
+msgstr "拒绝"
 
 #: .\templates\ourforum\plugins\inc_header_left_links.html:6
 msgid "Blog"
@@ -353,7 +383,7 @@ msgid "Please correct the errors below."
 msgstr "请修正下列错误"
 
 #: .\templates\ourforum\post.html:88
-#: .\templates\ourforum\profile\change_profile.html:197
+#: .\templates\ourforum\profile\change_profile.html:199
 #: .\templates\ourforum\topic.html:140
 msgid "Submit"
 msgstr "提交"
@@ -370,22 +400,22 @@ msgstr "提交"
 msgid "Pages"
 msgstr "页数"
 
-#: .\templates\ourforum\profile\base.html:12
+#: .\templates\ourforum\profile\base.html:11
 #: .\templates\ourforum\profile\change_profile.html:66
 msgid "Bio"
 msgstr "简介"
 
-#: .\templates\ourforum\profile\base.html:25
-#: .\templates\ourforum\profile\base.html:27
+#: .\templates\ourforum\profile\base.html:24
+#: .\templates\ourforum\profile\base.html:26
 msgid "Introduction"
 msgstr "简介"
 
-#: .\templates\ourforum\profile\base.html:32
+#: .\templates\ourforum\profile\base.html:31
 #: .\templates\ourforum\profile\change_profile.html:33
 msgid "Change profile"
 msgstr "更新个人信息"
 
-#: .\templates\ourforum\profile\base.html:35
+#: .\templates\ourforum\profile\base.html:34
 msgid "Change password"
 msgstr "修改密码"
 
@@ -398,7 +428,7 @@ msgstr "更新 %(view_user.lbforum_profile)s 的个人信息"
 msgid "birthday"
 msgstr "生日"
 
-#: .\templates\ourforum\profile\change_profile.html:186
+#: .\templates\ourforum\profile\change_profile.html:188
 msgid "Sex"
 msgstr "性别"
 
@@ -407,11 +437,15 @@ msgstr "性别"
 msgid "Joined on"
 msgstr "加入时间"
 
-#: .\templates\ourforum\profile\inc_base_profile.html:33
+#: .\templates\ourforum\profile\inc_base_profile.html:25
+msgid "levels："
+msgstr "积分"
+
+#: .\templates\ourforum\profile\inc_base_profile.html:39
 msgid "View all topics"
 msgstr "查看所有话题"
 
-#: .\templates\ourforum\profile\inc_base_profile.html:36
+#: .\templates\ourforum\profile\inc_base_profile.html:42
 msgid "View all posts"
 msgstr "查看所有问答"
 
@@ -541,19 +575,19 @@ msgstr "%s ago"
 msgid "reply to see the attachments"
 msgstr "附件回复可见"
 
-#: .\views.py:149 .\views.py:242 .\views.py:272 .\views.py:283 .\views.py:298
+#: .\views.py:152 .\views.py:245 .\views.py:275 .\views.py:286 .\views.py:301
 msgid "no right"
 msgstr "无权限"
 
-#: .\views.py:184 .\views.py:244
+#: .\views.py:187 .\views.py:247
 msgid "topic"
 msgstr "话题"
 
-#: .\views.py:190 .\views.py:239
+#: .\views.py:193 .\views.py:242
 msgid "reply"
 msgstr "回复"
 
-#: .\views.py:194
+#: .\views.py:197
 msgid "you can't reply, this topic closed."
 msgstr "该话题已锁定，无法回复"
 

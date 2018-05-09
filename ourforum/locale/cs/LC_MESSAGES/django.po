@@ -326,7 +326,7 @@ msgstr "Spřátelené odkazy"
 
 #: .\templates\ourforum\index.html:30
 msgid "Hi,Welcome to "
-msgstr ""
+msgstr "您好，欢迎来到 "
 
 #: .\templates\ourforum\index.html:38
 msgid "More"

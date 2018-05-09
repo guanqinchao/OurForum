@@ -4,7 +4,7 @@ from rest_framework import routers
 
 from ourforum import views, profileviews
 from ourforum import api
-
+from ourforum.views import *
 router = routers.DefaultRouter()
 router.register(r'topic', api.TopicViewSet)
 
@@ -63,4 +63,15 @@ urlpatterns = [
         name='lbforum_lang_js'),
     url('^markitup_preview/$', views.markitup_preview,
         name='markitup_preview'),
+    url(r'^makefriend/(?P<sender>\w+)/(?P<receiver>\w+)/$',  views.makefriend, name='make_friend'),
+    url(r'^user/friend/(?P<pk>\d+)/(?P<flag>\d+)/$', views.friendagree, name='friend_agree'),  # pk为对方用户id
+    url(r'^user/notices/$', views.shownotice, name='show_notice'),
+    url(r'^user/notices/(?P<pk>\d+)/$', views.noticedetail, name='notice_detail'),
+    url(r'^user/messagedetail/(?P<pk>\d+)/$', MessageDetail.as_view(), name='message_detail'),  # pk为消息id
+    url(r'^user/message/sendto/(?P<pk>\d+)/$', MessageCreate.as_view(), name='send_message'),  # pk为对方用户id
+    url(r'^verify_code/$', views.verify_code,name='verify_code'),  # 配置验证码图片
+    url(r'^show_verify2/$', views.show_verify2),  # 显示验证码界面
+    url(r'^verify_check2/$', views.verify_check2, name='verify_check2'),  # 检测验证码
+    url(r'^good/(?P<article_id>\d+)/(?P<user_id>\d+)$', views.good),
+    url(r'^likes/', include('likes.urls')),
 ]

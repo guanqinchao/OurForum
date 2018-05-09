@@ -5,6 +5,7 @@
 {% load lbforum_widget_tags %}
 
 {% block content_right_bar %}
+
   {% include 'ourforum/widgets/cur_user_profile.html' %}
   <div class="sep20"></div>
   {% lbf_categories_and_forums %}
@@ -38,4 +39,5 @@
       <a href="{% url 'lbforum_recent' %}">{% trans "More" %}</a>
     </div>
   </div>
+   <div class="cell"><div class="fr fade"><a class="dark" href="#Top">{% trans "Back To Top" %}</a></div>
 {% endblock %}
