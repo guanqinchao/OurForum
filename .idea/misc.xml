@@ -1,8 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-<<<<<<< HEAD
-  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.6 (Test_Forum)" project-jdk-type="Python SDK" />
-=======
-  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.6.3 virtualenv at C:\Users\Qingchao\Documents\GitHub\Test_Forum\venv " project-jdk-type="Python SDK" />
->>>>>>> d97cdeeb28c5a61058754418d13d948c9dd12d8a
+  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.6 virtualenv at D:\workspace\OurForum\venv" project-jdk-type="Python SDK" />
 </project>
