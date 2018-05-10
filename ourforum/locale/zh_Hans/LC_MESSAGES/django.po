@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-02 00:47+0800\n"
+"POT-Creation-Date: 2018-05-10 17:16+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -60,7 +60,7 @@ msgstr "话题类型"
 msgid "Subject"
 msgstr "标题"
 
-#: .\forms.py:59 .\forms.py:181 .\forms.py:191
+#: .\forms.py:59 .\forms.py:181 .\forms.py:190
 msgid "Message"
 msgstr "内容"
 
@@ -175,11 +175,11 @@ msgstr "男"
 msgid "User"
 msgstr "用户"
 
-#: .\models.py:264 .\templates\ourforum\profile\change_profile.html:57
+#: .\models.py:264 .\templates\ourforum\profile\change_profile.html:63
 msgid "Nickname"
 msgstr "昵称"
 
-#: .\models.py:265 .\templates\ourforum\profile\change_profile.html:49
+#: .\models.py:265 .\templates\ourforum\profile\change_profile.html:55
 msgid "Avatar"
 msgstr "头像"
 
@@ -208,11 +208,11 @@ msgstr "好友申请"
 msgid "Notices"
 msgstr "通知（复数）"
 
-#: .\templates\ourforum\form.html:23
+#: .\templates\ourforum\form.html:30
 msgid "给好友发消息~"
 msgstr ""
 
-#: .\templates\ourforum\form.html:33
+#: .\templates\ourforum\form.html:40
 msgid "~给好友发消息~"
 msgstr ""
 
@@ -378,12 +378,12 @@ msgid "Edit"
 msgstr "编辑"
 
 #: .\templates\ourforum\post.html:63
-#: .\templates\ourforum\profile\change_profile.html:40
+#: .\templates\ourforum\profile\change_profile.html:46
 msgid "Please correct the errors below."
 msgstr "请修正下列错误"
 
 #: .\templates\ourforum\post.html:88
-#: .\templates\ourforum\profile\change_profile.html:199
+#: .\templates\ourforum\profile\change_profile.html:205
 #: .\templates\ourforum\topic.html:140
 msgid "Submit"
 msgstr "提交"
@@ -401,7 +401,7 @@ msgid "Pages"
 msgstr "页数"
 
 #: .\templates\ourforum\profile\base.html:11
-#: .\templates\ourforum\profile\change_profile.html:66
+#: .\templates\ourforum\profile\change_profile.html:72
 msgid "Bio"
 msgstr "简介"
 
@@ -411,7 +411,7 @@ msgid "Introduction"
 msgstr "简介"
 
 #: .\templates\ourforum\profile\base.html:31
-#: .\templates\ourforum\profile\change_profile.html:33
+#: .\templates\ourforum\profile\change_profile.html:39
 msgid "Change profile"
 msgstr "更新个人信息"
 
@@ -424,11 +424,11 @@ msgstr "修改密码"
 msgid "Change %(view_user.lbforum_profile)s's profile"
 msgstr "更新 %(view_user.lbforum_profile)s 的个人信息"
 
-#: .\templates\ourforum\profile\change_profile.html:74
+#: .\templates\ourforum\profile\change_profile.html:80
 msgid "birthday"
 msgstr "生日"
 
-#: .\templates\ourforum\profile\change_profile.html:188
+#: .\templates\ourforum\profile\change_profile.html:194
 msgid "Sex"
 msgstr "性别"
 
@@ -590,6 +590,9 @@ msgstr "回复"
 #: .\views.py:197
 msgid "you can't reply, this topic closed."
 msgstr "该话题已锁定，无法回复"
+
+msgid "Enter a valid date."
+msgstr "请输入一个有效的日期。"
 
 #, fuzzy
 #~| msgid "User"

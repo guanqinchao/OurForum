@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-02 00:42+0800\n"
+"POT-Creation-Date: 2018-05-10 17:16+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -60,7 +60,7 @@ msgstr "Topic Type"
 msgid "Subject"
 msgstr "Subject"
 
-#: .\forms.py:59 .\forms.py:181 .\forms.py:191
+#: .\forms.py:59 .\forms.py:181 .\forms.py:190
 msgid "Message"
 msgstr "Message"
 
@@ -175,11 +175,11 @@ msgstr "Male"
 msgid "User"
 msgstr "User"
 
-#: .\models.py:264 .\templates\ourforum\profile\change_profile.html:57
+#: .\models.py:264 .\templates\ourforum\profile\change_profile.html:63
 msgid "Nickname"
 msgstr "Nickname"
 
-#: .\models.py:265 .\templates\ourforum\profile\change_profile.html:49
+#: .\models.py:265 .\templates\ourforum\profile\change_profile.html:55
 msgid "Avatar"
 msgstr "Avatar"
 
@@ -209,11 +209,11 @@ msgstr "FriendApplications"
 msgid "Notices"
 msgstr "Topics"
 
-#: .\templates\ourforum\form.html:23
+#: .\templates\ourforum\form.html:30
 msgid "给好友发消息~"
 msgstr ""
 
-#: .\templates\ourforum\form.html:33
+#: .\templates\ourforum\form.html:40
 msgid "~给好友发消息~"
 msgstr ""
 
@@ -383,12 +383,12 @@ msgid "Edit"
 msgstr "Edit"
 
 #: .\templates\ourforum\post.html:63
-#: .\templates\ourforum\profile\change_profile.html:40
+#: .\templates\ourforum\profile\change_profile.html:46
 msgid "Please correct the errors below."
 msgstr "Please correct the errors below."
 
 #: .\templates\ourforum\post.html:88
-#: .\templates\ourforum\profile\change_profile.html:199
+#: .\templates\ourforum\profile\change_profile.html:205
 #: .\templates\ourforum\topic.html:140
 msgid "Submit"
 msgstr "Submit"
@@ -406,7 +406,7 @@ msgid "Pages"
 msgstr "Pages"
 
 #: .\templates\ourforum\profile\base.html:11
-#: .\templates\ourforum\profile\change_profile.html:66
+#: .\templates\ourforum\profile\change_profile.html:72
 msgid "Bio"
 msgstr "Bio"
 
@@ -416,7 +416,7 @@ msgid "Introduction"
 msgstr "Introduction"
 
 #: .\templates\ourforum\profile\base.html:31
-#: .\templates\ourforum\profile\change_profile.html:33
+#: .\templates\ourforum\profile\change_profile.html:39
 msgid "Change profile"
 msgstr "Change profile"
 
@@ -429,11 +429,11 @@ msgstr "Change password"
 msgid "Change %(view_user.lbforum_profile)s's profile"
 msgstr "Change %(view_user.lbforum_profile)s's profile"
 
-#: .\templates\ourforum\profile\change_profile.html:74
+#: .\templates\ourforum\profile\change_profile.html:80
 msgid "birthday"
 msgstr "birthday"
 
-#: .\templates\ourforum\profile\change_profile.html:188
+#: .\templates\ourforum\profile\change_profile.html:194
 msgid "Sex"
 msgstr "Sex"
 

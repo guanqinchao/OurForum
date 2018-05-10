@@ -17,8 +17,10 @@ from django.conf.urls import url, include
 from django.contrib import admin
 from django.conf import settings
 from django.conf.urls.static import static
-
+def i18n_javascript(request):
+    return admin.site.i18n_javascript(request)
 urlpatterns = [
+    url(r'^admin/jsi18n', i18n_javascript),
     url(r'^816/admin/', admin.site.urls),
     url(r'^', include('ourforum.urls')),
     url(r'^accounts/', include('allauth.urls')),
