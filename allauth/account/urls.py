@@ -13,7 +13,7 @@ urlpatterns = [
     url(r"^password/set/$", views.password_set, name="account_set_password"),
 
     url(r"^inactive/$", views.account_inactive, name="account_inactive"),
-
+    # url(r'^user_active/([a-zA-Z]+)$',views.user_active,name='user_active'),
     # E-mail
     url(r"^email/$", views.email, name="account_email"),
     url(r"^confirm-email/$", views.email_verification_sent,
