@@ -5,63 +5,66 @@
 {% load lbforum_tags %}
 {% block content_content %}
 <div class="box">
-  <!--<div class="inner">-->
-     <table cellspacing="0" cellpadding="5" border="0">
-      <tbody>
 
+<link rel="stylesheet" href="/static/ourforum/css/myemojiPl.css">
+	  <div class="inner">
+      <form action="" accept-charset="utf-8" method="post" class="frm-form" id="afocus">
+         {% trans "~给好友发消息~" %}
+          {% csrf_token %}
+        {% if redirect_field_value %}
+          <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+        {% endif %}
+        {% if form.errors %}
+          <div class="ct-box error-box">
+            <p class="errornote"> {% trans "Please correct the errors below." %} </p>
+            {{ form|form_all_error }}
+          </div>
+        {% endif %}
+        <div class="sep10"></div>
+        <table cellspacing="0" cellpadding="5" border="0">
+          <tbody>
+          <tr>
+              <td width="120" align="right"> {% trans "Content：" %} </td>
+               <td width="200" align="left">
+                {{ form.content}}
+                </td>
+            </tr>
 
-<script>
+	<!--<div class="Main">-->
+        <!--<div class="Input_Box">-->
+        	<!--<div contenteditable="true" class="Input_text"></div>-->
+          <!--<div class="Input_Foot">-->
+          	<!--<a class="imgBtn" href="javascript:void(0);">'◡'</a>-->
+          <!--</div>-->
+        <!--</div>-->
+        <!--<div class="faceDiv">-->
+        	<!--<section class="emoji_container">-->
+        	<!--</section>-->
+        	<!--<section class="emoji_tab"></section>-->
+        <!--</div>-->
+    <!--</div>-->
+
+            <tr>
+              <td width="120" align="right"> {% trans "Captcha:" %} </td>
+              <td width="200" align="left">
+                {{ form.captcha }}
+              </td>
+            </tr>
+            <tr>
+              <td width="120" align="right"> </td>
+              <td width="200" align="left"> <input type="submit" class="super normal button" value="{% trans 'Send Message' %}"> </td>
+            </tr>
+          </tbody>
+        </table>
+      </form>
+    </div>
+
+ <script>
     function refresh_check_code(ths) {
         ths.src += '?';
         //src后面加问好会自动刷新验证码img的src
 }
 </script>
-
-<!--<script type="text/javascript" src="/static/ourforum/js/ckeditor.js"></script>-->
- <!--emojione v2.1.1 使用bootstrap的cdn-->
-  <link rel="stylesheet" type="text/css" href="http://cdn.bootcss.com/emojione/2.1.1/assets/sprites/emojione.sprites.css">
-  <script type="text/javascript" src="http://cdn.bootcss.com/emojione/2.1.1/lib/js/emojione.min.js"></script>
-
-  <!--emojionearea-->
-  <link rel="stylesheet" type="text/css" href="/static/ourforum/css/emojionearea-2.1.3.min.css">
-  <script type="text/javascript" src="/static/ourforum/js/emojionearea-2.1.3.min.js"></script>
-
-<!--<form method="post" action="#">{% csrf_token %}-->
-		<!--{% trans "给好友发消息~" %}-->
-	<!--&lt;!&ndash;<script type="text/javascript">CKEDITOR.replace('content');</script>&ndash;&gt;-->
-        <!--{{ form.as_p }}-->
-
-  <!--<style>-->
-      <!--body{text-align:center}-->
-    <!--</style>-->
-<link rel="stylesheet" href="/static/ourforum/css/myemojiPl.css">
-	<form action="{% url 'verify_check2' %}" method="post">
-   {% csrf_token %}
-         {% trans "~给好友发消息~" %}
-	<!--{{ form.as_p }}-->
-	<!--<script type="text/javascript">CKEDITOR.replace('content');</script>-->
-        	<div class="Main">
-        <div class="Input_Box">
-        	<div contenteditable="true" class="Input_text"></div>
-          <div class="Input_Foot">
-          	<a class="imgBtn" href="javascript:void(0);">'◡'</a>
-          </div>
-        </div>
-        <div class="faceDiv">
-        	<section class="emoji_container">
-        	</section>
-        	<section class="emoji_tab"></section>
-        </div>
-    </div>
- 	<!--<img onclick="this.setAttribute('src','/verify_code/')" src="{% url 'verify_code' %}" title="点击重新获取" /><br>-->
-    请输入验证码：<input type="text" name="verify"><br>
- <img id="check_code_img" src="/verify_code/" onclick="refresh_check_code(this)"><span id="sp">看不清,点图换一张</span><br>
-<!--<img onclick="this.setAttribute('src','/verify_code/')" src="{% url 'verify_code' %}" ><span id="sp">看不清,换一张</span><br>-->
-<input type="submit" value="提交">
-        </form>
-    <!---->
-<!--</form>-->
-<!--<script type="text/javascript">CKEDITOR.replace('content');</script>-->
 <script src="/static/ourforum/js/jquery-1.12.4.js"></script>
     <script type="text/javascript" >
         $(function () {
@@ -195,8 +198,6 @@ var emojiconfig = {
   };
 $('.Main').myEmoji({emojiconfig : emojiconfig});
 </script>
-</form>
-  </tbody>
-    </table>
+
      </div>
 {% endblock %}

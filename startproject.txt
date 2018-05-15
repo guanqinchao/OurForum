@@ -1,1 +1,204 @@
 django 版本查看：python -m django --version
+二、数据库设计
+1.编写models 数据库
+blank = True 这个字段可以为空 null =True 如果有空的字段就会默认为null
+CharField 用来存储字符串的 TextField用来存储文本的
+
+2.同步数据库
+3.登录admin 然后在admin.py中注册models
+4.views和urls
+django 版本查看：python -m django --version
+
+1、django 包 pip3 install django==1.10  ; python 3.5 ； pymysql： mysql 与 django pyhon 的连接、映射处理、CRUD..
+
+2、包 el_pagination    pip3 install django-el_pagination
+Django pagination tools supporting Ajax, multiple and lazy pagination,
+Twitter-style and Digg-style pagination
+支持Ajax的Django分页工具，多重和简单快捷的分页，Twitter风格和Digg风格的分页；
+
+3、包 constance ： Django live settings with pluggable backends, including Redis.
+A Django app for storing dynamic settings in pluggable backends (Redis and Django model backend built in) with an integration with the Django admin app.
+
+Django应用程序，用于在与Django管理应用程序集成的可插入后端（内置Redis和Django模型后端）中存储动态设置。
+    pip3 install django-constance
+
+4、 包 easy_thumbnails（pillow、PIL）图片（头像）、图象处理包
+pip3 install easy_thumbnails
+
+Given the following setting:  setting.py 的设置
+THUMBNAIL_ALIASES = {
+    '': {
+        'avatar': {'size': (50, 50), 'crop': True},
+    },
+}
+
+Template:      模板包（Html文件中的添加）
+{% load thumbnail %}
+<img src="{{ profile.photo|thumbnail_url:'avatar' }}" alt="" />
+
+Python:（py文件中代码（我的系统一般处理人物头像，问题图片等等））
+from easy_thumbnails.files import get_thumbnailer
+thumb_url = get_thumbnailer(profile.photo)['avatar'].url
+
+5、rest_framework  http://www.ywnds.com/?p=12148
+  pip3 install django-rest_framework
+Django REST框架是一个用于构建Web API的功能强大且灵活的工具包。
+ Web浏览API对于开发人员来说是一个巨大的可用性胜利。
+     认证机制包括OAuth1a和OAuth2的软件包。   django.contrib.auth 标准权限验证
+     支持ORM和非ORM数据源的序列化。
+     如果您不需要更强大的功能，只需使用常规的基于功能的视图即可完全自定义。
+     广泛的文档和良好的社区支持。
+     由国际公认的公司使用和信任，包括Mozilla，Red Hat，Heroku和Eventbrite。
+Views: 用于视图集的设计：
+   一般要创建一个Serializers.py 序列化器文件，用于定义如何展示API的新模块 : lbforum\serializers.py (一组数据：帖子、作者、名字、日期等等)
+
+使用超链接关系 HyperlinkedModelSerializer extend ModelSerializer
+Setting.py ： 所有REST框架的全局设置保存在一个叫做 REST_FRAMEWORK 的配置字典中
+
+6、包 lbattachment、lbutils  pip3 install  django-lbattachment
+lbattachment  用于管理附件的Django APP。lbutils  的Django  工具类包
+
+7、包 jango-picklefield ，提供了pickle object字段的实现。 这些字段可以包含任何可拣货对象。
+这个实现是由Taavi Taijala在Django的片段＃1694中采用的，而Taavi Taijala则是基于Oliver Beattie的Django片段＃513。
+django-picklefield根据MIT许可证提供。  from picklefield import PickledObjectField（contance 对浏览器接受数据库的返回数据的处理）
+
+如果您需要使用PickledObjectField序列化对象以传输到浏览器，则可能需要对该字段进行子类化并覆盖value_to_string（）方法。 目前pickle字段被序列化为base64编码的pickles，这允许可靠的反序列化，但是这种格式不便于在浏览器中解析。 通过重写value_to_string（），你可以选择更方便的序列化格式。
+字段现在接受布尔关键字参数副本，默认值为True。 该副本对于查找正常工作是必需的。 如果你不关心在picklefield上执行查找，你可以设置copy = False来节省一些内存使用量。 这对于非常大的对象树尤其有益。
+
+8、包 dateutil 日期操作工具类 ; download adress :http://labix.org/python-dateutil#head-2f49784d6b27bae60cde1cff6a535663cf87497b
+   python时区设置——pytz模块
+dateutil模块为Python 2.3+中的标准日期时间模块提供了强大的扩展。
+使用命令下载： pip3  install python-dateutil  （包括 six.py 用于编写运行在Python 2和3上的代码的实用程序）
+
+9、包 django-allauth
+集成的Django应用程序解决认证，注册，登录，账户管理以及第三方（社交）账户认证。
+解决社交认证问题的大多数现有Django应用都只关注这一点。 您通常需要集成其他应用程序才能通过本地帐户支持身份验证。
+这种方法分离了当地和社会认证的世界。 但是，在两个世界中都有一些常见的情况需要处理。 例如，OpenID提供商传递的电子邮件地址不保证被验证。 因此，在将OpenID帐户连接到本地帐户之前，必须验证电子邮件地址。 所以，电子邮件验证需要在两个世界中都存在。
+整合这两个世界是一个相当乏味的过程。 绝对不是简单地将一个社交认证应用程序和一个本地帐户注册应用程序添加到您的INSTALLED_APPS列表中。
+//应该不需要怎么多。。（社交软件验证的话应该要，这边初步最多实现邮箱验证之类的）
+
+'allauth',
+'allauth.account',  // 到这
+'allauth.socialaccount',
+# ... include the providers you want to enable:
+'allauth.socialaccount.providers.amazon',
+'allauth.socialaccount.providers.angellist',
+'allauth.socialaccount.providers.bitbucket',
+'allauth.socialaccount.providers.bitly',
+'allauth.socialaccount.providers.coinbase',
+'allauth.socialaccount.providers.dropbox',
+'allauth.socialaccount.providers.facebook',
+'allauth.socialaccount.providers.flickr',
+'allauth.socialaccount.providers.feedly',
+'allauth.socialaccount.providers.github',
+'allauth.socialaccount.providers.google',
+'allauth.socialaccount.providers.hubic',
+'allauth.socialaccount.providers.instagram',
+'allauth.socialaccount.providers.linkedin',
+'allauth.socialaccount.providers.linkedin_oauth2',
+'allauth.socialaccount.providers.openid',
+'allauth.socialaccount.providers.persona',
+'allauth.socialaccount.providers.soundcloud',
+'allauth.socialaccount.providers.stackexchange',
+'allauth.socialaccount.providers.tumblr',
+'allauth.socialaccount.providers.twitch',
+'allauth.socialaccount.providers.twitter',
+'allauth.socialaccount.providers.vimeo',
+'allauth.socialaccount.providers.vk',
+'allauth.socialaccount.providers.weibo',
+'allauth.socialaccount.providers.xing',
+...
+)
+
+
+10、包captcha  ；一个第三方的验证码插件   pip3 install django-simple-captcha
+ web(验证码模块):  url(r'^captcha/', include('captcha.urls')),
+
+11、包 postmakeup ： bbcode 相关包 下载地址：https://pypi.python.org/pypi/postmarkup/
+将BBCode（http://en.wikipedia.org/wiki/BBCode）转换为HTML和XHTML片段。
+始 终输出有效的XHTML，即使是来自BBCode的复杂嵌套。
+
+12、bs4 即 beautifulsoup4 ；下载地址：https://pypi.python.org/pypi/beautifulsoup4/4.3.2
+Beautiful Soup是 HTML or XML 解析器,提供Pythonic 词语迭代，搜索和修改分析树。
+13、django-debug-toolbar 顾名思义： debug 工具包 用于调试
+
+14、https://pypi.python.org/pypi/wsgiref/
+Web服务器网关接口（WSGI）是Web服务器软件和用Python编写的Web应用程序之间的标准接口。拥有一个标准的接口可以很容易地使用支持WSGI的应用程序以及许多不同的Web服务器。只有Web服务器和编程框架的作者需要了解WSGI设计的每个细节和角落案例。您不需要了解WSGI的每个细节，只需安装WSGI应用程序或使用现有框架编写Web应用程序即可.wsgiref是WSGI规范的参考实现，可用于将WSGI支持添加到Web服务器或框架。它提供了用于操纵WSGI环境变量和响应头的实用程序，用于实现WSGI服务器的基类，为WSGI应用程序提供服务的演示HTTP服务器以及用于检查WSGI服务器和应用程序是否符合WSGI规范（PEP 333）的验证工具。
+有关WSGI的更多信息，请参阅https://wsgi.readthedocs.org/以及指向教程和其他资源的链接。
+------------------问题合集：
+
+TypeError: 'NoneType' object is not iterable"错误分析">【Python】python "TypeError: 'NoneType' object is not iterable"错误分析
+分类： 程序设计   |   dataspark 发布于: 2013-08-13
+报错："TypeError: 'NoneType' object is not iterable" flag, val = process() TypeError: 'NoneType' object is not iterable  这个错误提示一般发生在将None赋给多个值时。 如 a,b,c,d = None 就会这样报错。 这里是没有考虑到else的情况，在if条件不满足时，函数默认返回None。 调用时，将None赋给 flag, val 就出现了这样的错误提示。 【结论】 1. 将None赋给多个值时，会出现提示：TypeError: 'NoneType' object is not iterable 2. 函数返回值一定要考虑到条件分支的覆盖 3. 在没有return语句时，python默认会返回None
+
+pip 在升级时，一般使用
+python -m pip install --upgrade pip
+
+而在windows系统下，升级可能会遇到类似
+ AttributeError: 'NoneType' object has no attribute 'bytes'
+这样的提示。
+解决方案
+
+easy_install -U pip
+
+解决方法：
+
+python -m pip install -U --force-reinstall pip
+ （接下来的pip3 install django==1.10 命令，会先使用whl文件现在所需的包，Django-1.10-py2.py3-none-any.whl）
+）
+
+【Django错误】OSError: raw write() returned invalid length 14 (should have been between 0 and 7)
+我认为这可能是unicode字符的返回值问题，总的来说，与win10系统、版本有关系，踩中雷区了（本人win10,版本    10.0.16299 版本 16299）
+　　可以cmd一下,输入msinfo32，就能看到版本情况
+可以使用pip install win_unicode_console安装win_unicode_console，在代码文件中添加以下两行代码解决：写在ansitowin32.py开头
+import win_unicode_console
+win_unicode_console.enable()
+
+分页机制，默认设置
+Warning: You have specified a default PAGE_SIZE pagination rest_framework setting,without specifying also a DEFAULT_PAGINATION_CLASS.
+	HINT: The default for DEFAULT_PAGINATION_CLASS is None. In previous versions this was PageNumberPagination. If you wish to define PAGE_SIZE globally whilst defining pagination_class on a per-view basis you may silence this check.
+
+您已经指定了默认的PAGE_SIZE分页rest_framework设置，而不指定DEFAULT_PAGINATION_CLASS。
+提示：DEFAULT_PAGINATION_CLASS的默认值为None。 在以前的版本中，这是PageNumberPagination。 如果您希望全局定义PAGE_SIZE，同时在每个视图的基础上定义pagination_class，则可以使此检查无效。
+REST_FRAMEWORK = {
+    # Use Django's standard `django.contrib.auth` permissions,
+    # or allow read-only access for unauthenticated users.
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+    ],
+    'DEFAULT_RENDERER_CLASSES': (
+        'rest_framework.renderers.JSONRenderer',
+    ),
+    'DEFAULT_PARSER_CLASSES': (
+        'rest_framework.parsers.JSONParser',
+    ),
+    'PAGE_SIZE': 20
+}
+
+DEFAULT_PERMISSION_CLASSES
+权限类的列表或元组，它决定了在视图开始时检查的默认权限集。必须由列表中的每个类授予权限。
+
+
+
+
+当我们编写wsgi时候报错
+错误内容
+self.status.split(' ',1)[0], self.bytes_sent
+AttributeError: 'NoneType' object has no attribute 'split'
+
+self.status.split
+self.status结果为None，导致后面split()报错
+
+status:200 OK
+[06/Apr/2018 19:46:56] "GET / HTTP/1.1" 200 13437
+status:304 Not Modified
+[06/Apr/2018 19:46:56] "GET /static/debug_toolbar/js/jquery_pre.js HTTP/1.1" 304 0
+status:304 Not Modified
+[06/Apr/2018 19:46:56] "GET /static/debug_toolbar/js/jquery_post.js HTTP/1.1" 304 0
+[06/Apr/2018 19:46:56] "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 304 0
+[06/Apr/2018 19:46:56] "GET /static/debug_toolbar/css/print.css HTTP/1.1" 200 29
+[06/Apr/2018 19:46:56] "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 200 20322
+status:304 Not Modified
+status:200 OK
+status:200 OK
+[06/Apr/2018 19:46:56] "GET /static/lbforum/styles/v2ex/bg_top.png HTTP/1.1" 200 1930
