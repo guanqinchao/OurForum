@@ -10,3 +10,9 @@ bower_components/
 media/
 collectedstatic/
 /ourforum_site/settings/local.py
+.idea/workspace.xml
+.idea/workspace.xml
+.idea/workspace.xml
+*.xml
+ourforum/templates/ourforum/index.html
+ourforum/templates/ourforum/index.html

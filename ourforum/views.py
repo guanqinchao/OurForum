@@ -29,6 +29,14 @@ from django.utils.translation import (
     LANGUAGE_SESSION_KEY, check_for_language, get_language, to_locale,
 )
 User = user
+from django.core.cache import cache
+#统计当前在线人数（5分钟内，中间件实现于middle.py）
+def get_online_ips_count():
+    online_ips = cache.get("online_ips", [])
+    if online_ips:
+        online_ips = cache.get_many(online_ips).keys()
+        return len(online_ips)
+    return 0
 
 def set_language(request):
     """
@@ -87,7 +95,40 @@ def get_all_posts(user, select_related=True):
     return qs.distinct()
 
 
+from datetime import datetime
+from django.utils.timezone import now, timedelta
+# 得到论坛信息: 昨日发帖数，今日发帖数
+def get_forum_info():
+    # 请使用缓存
+    oneday = timedelta(days=1)
+    today = datetime.today()
+    today0 = datetime(today.year, today.month, today.day, 0, 0, 0)
+    print(today0)
+    lastday = today0 - oneday
+    todayend = today0 + oneday
+    print(todayend)
+    # post_number = Post.objects.count()
+    # account_number = LoginUser.objects.count()
 
+    lastday_topic_number = cache.get('lastday_topic_number', None)
+    today_topic_number = cache.get('today_topic_number', None)
+
+    if lastday_topic_number is None:
+        lastday_topic_number = Topic.objects.filter(created_on__range=[lastday, today0]).count()
+        cache.set('lastday_topic_number', lastday_topic_number, 60 * 60)
+
+    if today_topic_number is None:
+        today_topic_number = Topic.objects.filter(created_on__range=[today0, todayend]).count()
+        print(today_topic_number)
+        cache.set('today_topic_number', today_topic_number, 60 * 60)
+
+    info = {
+        # "post_number": post_number,
+        #     "account_number": account_number,
+            "lastday_topic_number": lastday_topic_number,
+            "today_topic_number": today_topic_number
+    }
+    return info
 
 def index(request, template_name="ourforum/index.html"):
     '''
@@ -181,6 +222,7 @@ def new_post(
         request, forum_id=None, topic_id=None, form_class=NewPostForm,
         template_name='ourforum/post.html'):
     user = request.user
+    # 用户发言前要求完善个人信息
     if not user.lbforum_profile.nickname:
         return redirect('lbforum_change_profile')
     qpost = topic = forum = first_post = preview = None
@@ -208,6 +250,7 @@ def new_post(
             post = form.save()
             forum = post.topic.forum
             if topic:
+                user.levels += 5  # 提问一次积分加 5
                 return HttpResponseRedirect(post.get_absolute_url_ext())
             else:
                 return HttpResponseRedirect(reverse("lbforum_forum",
@@ -311,6 +354,9 @@ def toggle_topic_attr(request, topic_id, attr):
     return HttpResponseRedirect(reverse("lbforum_topic", args=[topic.id]))
 
 
+
+
+
 # 加好友
 def makefriend(request, sender, receiver):
     sender = User.objects.get(username=sender)
@@ -361,6 +407,7 @@ def friendagree(request, pk, flag):
     else:
         str = "拒绝加好友"
     return HttpResponse(str)
+
 from ourforum.forms import MessageForm
 class MessageCreate(CreateView):
     model = Message

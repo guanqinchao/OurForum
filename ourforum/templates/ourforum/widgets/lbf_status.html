@@ -7,18 +7,34 @@
     <table cellpadding="3" cellspacing="0" border="0" width="100%">
       <tbody>
         <tr>
-          <td align="right" width="40%"><span class="fade">{% trans "Total number of registered users" %}</span></td>
+          <td align="right" width="60%"><span class="fade">{% trans "Total number of registered users" %}</span></td>
           <td align="left"><strong>{{ total_users }}</strong></td>
         </tr>
         <tr>
-          <td align="right" width="40%"><span class="fade">{% trans "Total number of topics" %}</span></td>
+          <td align="right" width="60%"><span class="fade">{% trans "Total number of topics" %}</span></td>
           <td align="left"><strong>{{ total_topics }}</strong></td>
         </tr>
         <tr>
-          <td align="right" width="40%"><span class="fade">{% trans "Total number of posts" %}</span></td>
+          <td align="right" width="60%"><span class="fade">{% trans "Total number of posts" %}</span></td>
           <td align="left"><strong>{{ total_posts }}</strong></td>
         </tr>
-      </tbody>
+       <tr>
+          <td align="right" width="60%"><span class="fade">{% trans "Last registered user" %}</span></td>
+          <td align="left"><strong>{{ last_registered_user }}</strong></td>
+        </tr>
+      <tr>
+          <td align="right" width="60%"><span class="fade">{% trans "Online user count" %}</span></td>
+          <td align="left"><strong>{{online_ips_count}}</strong></td>
+        </tr>
+        <tr>
+          <td align="right" width="60%"><span class="fade">{% trans "Today topic count" %}</span></td>
+          <td align="left"><strong>{{today_topic_number}}</strong></td>
+        </tr>
+        <tr>
+          <td align="right" width="60%"><span class="fade">{% trans "Yesterday topic count" %}</span></td>
+          <td align="left"><strong>{{lastday_topic_number}}</strong></td>
+        </tr>
+        </tbody>
     </table>
   </div>
 </div>
