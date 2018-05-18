@@ -8,8 +8,10 @@ from .models import Category, Forum, TopicType, Topic,LoginUser,Message,Applicat
 from .models import Post,OurForumUserProfile
 from .models import Bulletin_board
 
+class Bulletin_boardAdmin(admin.ModelAdmin):
+    list_display = ('name', 'email', 'text',)
 
-admin.site.register(Bulletin_board)
+admin.site.register(Bulletin_board,Bulletin_boardAdmin)
 
 admin.site.register(Category)
 admin.site.site_header = '社区问答系统后台管理'

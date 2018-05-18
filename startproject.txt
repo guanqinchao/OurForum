@@ -407,3 +407,21 @@ https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/css/emojione.min.cs
   <!--};-->
 <!--$('.Main').myEmoji({emojiconfig : emojiconfig});-->
 <!--</script>
+
+
+
+function addDianzan(s){
+  	var value=parseInt(document.getElementById(s).innerHTML);
+  	value=value+1;
+  	document.getElementById(s).innerHTML=value;
+  	$.ajax({ //一个Ajax过程
+  	type: "post", //以post方式与后台沟通
+  	url : "default/actDianzanAction", //与此php页面沟通
+  	dataType:'json',//从php返回的值以 JSON方式 解释
+  	data: {"dianzan":value,"activityId":s}, //发给php的数据有两项，分别是上面传来的u和p
+  	success: function(json){//如果调用php成功
+  	//alert(json.username+'\n'+json.password); //把php中的返回值（json.username）给 alert出来
+  	//alert("haha"); //把php中的返回值显示在预定义的result定位符位置
+  	}
+  	});
+  	}2872402050@qq.com  14级_计算机与信息工程学院_软件测试_关勤超_2018届毕业设计论文
