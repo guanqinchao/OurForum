@@ -32,8 +32,8 @@
     }
 
     .smart-green label {
-        display: block;
-        margin: 0px 0px 5px;
+        /*display: block;*/
+        margin: auto auto auto;
     }
 
     .smart-green label > span {
@@ -87,3 +87,4 @@
         margin-top: 10px;
         margin-bottom: 10px;
     }
+

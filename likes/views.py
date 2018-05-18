@@ -57,6 +57,7 @@ def likes_change(request):
     if liked == direct:
         data['status'] = 403
         data['message'] = u'Invalid operation'
+        #无效操作
     else:
         #更新记录
         l.likes_num += direct
