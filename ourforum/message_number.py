@@ -5,7 +5,7 @@ from ourforum.models import Notice
 def messagenumber(request):
     ctx = {}
     if request.user.is_authenticated():
-        k = Notice.objects.filter(receiver=request.user, status=False).count()
+        k = Notice.objects.filter(receiver=request.user, is_status=False).count()
         ctx['message_number'] = k
         print(k)
     return(ctx)

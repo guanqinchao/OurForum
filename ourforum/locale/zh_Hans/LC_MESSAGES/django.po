@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-18 12:51+0800\n"
+"POT-Creation-Date: 2018-05-18 23:51+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,23 +16,23 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: .\admin.py:21
+#: .\admin.py:25
 msgid "Update forum state info"
 msgstr "更新版块状态信息"
 
-#: .\admin.py:47
+#: .\admin.py:51
 msgid "Update topic state info"
 msgstr "更新话题状态信息"
 
-#: .\admin.py:63
+#: .\admin.py:67
 msgid "sticky/unsticky topics"
 msgstr "置顶/取消置顶话题"
 
-#: .\admin.py:68
+#: .\admin.py:72
 msgid "close/unclose topics"
 msgstr "关闭/解锁话题"
 
-#: .\admin.py:73
+#: .\admin.py:77
 msgid "hide/unhide topics"
 msgstr "隐藏/显示话题"
 
@@ -48,7 +48,7 @@ msgstr "最新话题"
 msgid "Order By"
 msgstr "排序方式"
 
-#: .\forms.py:56 .\models.py:57 .\models.py:95 .\models.py:113
+#: .\forms.py:56 .\models.py:58 .\models.py:96 .\models.py:114
 msgid "Forum"
 msgstr "版块"
 
@@ -84,129 +84,137 @@ msgstr "请选择一个版块"
 msgid "Some word in you post is forbidden, please correct it."
 msgstr "您的内容包含敏感词，请修正"
 
-#: .\models.py:29
+#: .\models.py:30
 msgid "Category"
 msgstr "板块类型"
 
-#: .\models.py:30
+#: .\models.py:31
 msgid "Categories"
 msgstr "板块类型（复数）"
 
-#: .\models.py:53 .\models.py:131
+#: .\models.py:54 .\models.py:132
 #: .\templates\ourforum\inc_topic_detail.html:44
 #: .\templates\ourforum\topic.html:112
 msgid "Last post"
 msgstr "最新问答"
 
-#: .\models.py:58 .\templates\ourforum\widgets\categories_and_forums.html:4
+#: .\models.py:59 .\templates\ourforum\widgets\categories_and_forums.html:4
 msgid "Forums"
 msgstr "社区板块"
 
-#: .\models.py:61
+#: .\models.py:62
 msgid "Forum-Administrator"
 msgstr "社区管理员"
 
-#: .\models.py:100 .\models.py:115
+#: .\models.py:101 .\models.py:116
 #, fuzzy
 #| msgid "Topic Type"
 msgid "TopicType"
 msgstr "话题类型"
 
-#: .\models.py:101
+#: .\models.py:102
 #, fuzzy
 #| msgid "Topic Type"
 msgid "TopicTypes"
 msgstr "话题类型"
 
-#: .\models.py:106
+#: .\models.py:107
 msgid "Default"
 msgstr "默认"
 
-#: .\models.py:107 .\templates\ourforum\inc_topic_detail.html:30
+#: .\models.py:108 .\templates\ourforum\inc_topic_detail.html:30
 msgid "Distillate"
 msgstr "精华"
 
-#: .\models.py:120 .\models.py:210
+#: .\models.py:121 .\models.py:211
 msgid "Post"
 msgstr "问答"
 
-#: .\models.py:186
+#: .\models.py:187
 msgid "BBCode"
 msgstr "BBCode"
 
-#: .\models.py:187
+#: .\models.py:188
 msgid "Markdown"
 msgstr "Markdown"
 
-#: .\models.py:188
+#: .\models.py:189
 msgid "Html"
 msgstr "Html"
 
-#: .\models.py:190
+#: .\models.py:191
 #, fuzzy
 #| msgid "Topics"
 msgid "Topic"
 msgstr "话题（复数）"
 
-#: .\models.py:211 .\templates\ourforum\profile\inc_base_profile.html:45
+#: .\models.py:212 .\templates\ourforum\profile\inc_base_profile.html:45
 #: .\templates\ourforum\topic.html:110
 msgid "Posts"
 msgstr "问答(复数)"
 
-#: .\models.py:220
+#: .\models.py:221
 #, python-format
 msgid "Topic: %s"
 msgstr "话题: %s"
 
-#: .\models.py:221
+#: .\models.py:222
 #, python-format
 msgid "Re: %s"
 msgstr "回复: %s"
 
-#: .\models.py:260
+#: .\models.py:261
 msgid "Female"
 msgstr "女"
 
-#: .\models.py:261
+#: .\models.py:262
 msgid "Male"
 msgstr "男"
 
-#: .\models.py:265 .\models.py:360
+#: .\models.py:266 .\models.py:323
 msgid "User"
 msgstr "用户"
 
-#: .\models.py:267 .\templates\ourforum\profile\change_profile.html:79
+#: .\models.py:268 .\templates\ourforum\profile\change_profile.html:79
 msgid "Nickname"
 msgstr "昵称"
 
-#: .\models.py:268 .\templates\ourforum\profile\change_profile.html:71
+#: .\models.py:269 .\templates\ourforum\profile\change_profile.html:71
 msgid "Avatar"
 msgstr "头像"
 
-#: .\models.py:275
+#: .\models.py:276
 msgid "UserProfile"
 msgstr "用户信息"
 
-#: .\models.py:276
+#: .\models.py:277
 msgid "UserProfiles"
 msgstr "用户信息（复数）"
 
-#: .\models.py:312
-#, fuzzy
-#| msgid "Topics"
-msgid "Notices"
-msgstr "通知（复数）"
-
-#: .\models.py:386
+#: .\models.py:349
 #, fuzzy
 #| msgid "Message"
 msgid "Messages"
 msgstr "内容"
 
-#: .\models.py:401
+#: .\models.py:364
 #, fuzzy
 msgid "FriendApplications"
 msgstr "好友申请"
+
+#: .\models.py:381
+#, fuzzy
+#| msgid "Topics"
+msgid "Notices"
+msgstr "通知（复数）"
+
+#: .\models.py:458
+msgid "Bulletin_boardcontent"
+msgstr "留言内容"
+
+#: .\models.py:459
+msgid "Bulletin_boardlist"
+msgstr "留言列表"
 
 #: .\templates\ourforum\form.html:12
 msgid "~给好友发消息~"
@@ -225,7 +233,7 @@ msgstr "内容："
 msgid "Captcha:"
 msgstr "验证码："
 
-#: .\templates\ourforum\form.html:55 .\templates\ourforum\notice_list.html:15
+#: .\templates\ourforum\form.html:55 .\templates\ourforum\notice_list.html:14
 #: .\templates\ourforum\profile\inc_base_profile.html:33
 msgid "Send Message"
 msgstr "发消息"
@@ -261,30 +269,30 @@ msgstr "发表新话题"
 msgid "Distillate District"
 msgstr "精华区"
 
-#: .\templates\ourforum\inc_header.html:20
+#: .\templates\ourforum\inc_header.html:21
 msgid "My profile"
 msgstr "个人信息"
 
-#: .\templates\ourforum\inc_header.html:21
+#: .\templates\ourforum\inc_header.html:22
 msgid "Logout"
 msgstr "退出"
 
-#: .\templates\ourforum\inc_header.html:22
-#: .\templates\ourforum\inc_header.html:26
-msgid "Contact Us"
-msgstr "联系我们"
-
-#: .\templates\ourforum\inc_header.html:24
+#: .\templates\ourforum\inc_header.html:25
 #: .\templates\ourforum\widgets\cur_user_profile.html:42
 msgid "Sign Up"
 msgstr "注册"
 
-#: .\templates\ourforum\inc_header.html:25
+#: .\templates\ourforum\inc_header.html:26
 #: .\templates\ourforum\widgets\cur_user_profile.html:45
 msgid "Login"
 msgstr "登录"
 
-#: .\templates\ourforum\inc_header.html:39
+#: .\templates\ourforum\inc_header.html:27
+#: .\templates\ourforum\plugins\inc_header_left_links.html:9
+msgid "Contact Us"
+msgstr "联系我们"
+
+#: .\templates\ourforum\inc_header.html:40
 msgid "Search"
 msgstr "搜索"
 
@@ -360,25 +368,21 @@ msgstr "点击回到顶部"
 msgid "preview"
 msgstr "预览"
 
-#: .\templates\ourforum\notice_list.html:13
+#: .\templates\ourforum\notice_list.html:12
 msgid "My Friend："
 msgstr "我的好友："
 
-#: .\templates\ourforum\notice_list.html:20
+#: .\templates\ourforum\notice_list.html:19
 msgid "Notice:"
 msgstr "通知（复数）"
 
-#: .\templates\ourforum\notice_list.html:23
+#: .\templates\ourforum\notice_list.html:22
 msgid "Agree"
 msgstr "同意"
 
-#: .\templates\ourforum\notice_list.html:23
+#: .\templates\ourforum\notice_list.html:22
 msgid "Disagree"
 msgstr "拒绝"
-
-#: .\templates\ourforum\notice_list.html:28
-msgid "评论"
-msgstr ""
 
 #: .\templates\ourforum\plugins\inc_header_left_links.html:7
 msgid "Blog"
@@ -504,6 +508,28 @@ msgstr "话题（复数）"
 msgid "last post"
 msgstr "最新回复"
 
+#: .\templates\ourforum\qwo.html:25
+msgid "~~~Message function area~~~"
+msgstr "~~~留言功能区~~~"
+
+#: .\templates\ourforum\qwo.html:27
+#, fuzzy
+#| msgid "Nickname"
+msgid "name:"
+msgstr "姓名："
+
+#: .\templates\ourforum\qwo.html:33
+#, fuzzy
+#| msgid "Female"
+msgid "email:"
+msgstr "邮箱："
+
+#: .\templates\ourforum\qwo.html:38
+#, fuzzy
+#| msgid "Content："
+msgid "content:"
+msgstr "内容："
+
 #: .\templates\ourforum\recent.html:11 .\templates\ourforum\recent.html:26
 msgid "Recent Topics"
 msgstr "最新话题"
@@ -518,16 +544,35 @@ msgid ""
 "not automatically forward you)"
 msgstr "等不急了？点这里！"
 
+#: .\templates\ourforum\result_bb.html:12
+msgid " The Result of leave a message "
+msgstr "你的留言操作结果："
+
+#: .\templates\ourforum\result_bb.html:14
+#: .\templates\ourforum\result_friend.html:14
+#: .\templates\ourforum\result_sendmessage.html:14
+#, fuzzy
+#| msgid "Default"
+msgid "result"
+msgstr "默认"
+
+#: .\templates\ourforum\result_bb.html:15
+#: .\templates\ourforum\result_sendmessage.html:15
+#, fuzzy
+#| msgid "Home"
+msgid "Back Home"
+msgstr "返回首页"
+
 #: .\templates\ourforum\result_friend.html:12
 #, fuzzy
 msgid "Application Result"
 msgstr "好友申请"
 
-#: .\templates\ourforum\result_friend.html:14
+#: .\templates\ourforum\result_sendmessage.html:12
 #, fuzzy
-#| msgid "Default"
-msgid "result"
-msgstr "默认"
+#| msgid " The Result of leave a message "
+msgid " The Result of send a message "
+msgstr "你本次发消息操作结果："
 
 #: .\templates\ourforum\topic.html:47
 msgid "undistillate"
@@ -597,15 +642,15 @@ msgstr "注册用户数"
 
 #: .\templates\ourforum\widgets\lbf_status.html:26
 msgid "Online user count"
-msgstr ""
+msgstr "在线用户"
 
 #: .\templates\ourforum\widgets\lbf_status.html:30
 msgid "Today topic count"
-msgstr ""
+msgstr "今日话题数"
 
 #: .\templates\ourforum\widgets\lbf_status.html:34
 msgid "Yesterday topic count"
-msgstr ""
+msgstr "昨日话题数"
 
 #: .\templatetags\lbforum_filters.py:72
 msgid "Online"
@@ -624,21 +669,24 @@ msgstr "%s ago"
 msgid "reply to see the attachments"
 msgstr "附件回复可见"
 
-#: .\views.py:202 .\views.py:297 .\views.py:327 .\views.py:338 .\views.py:353
+#: .\views.py:202 .\views.py:296 .\views.py:326 .\views.py:337 .\views.py:352
 msgid "no right"
 msgstr "无权限"
 
-#: .\views.py:238 .\views.py:299
+#: .\views.py:237 .\views.py:298
 msgid "topic"
 msgstr "话题"
 
-#: .\views.py:244 .\views.py:294
+#: .\views.py:243 .\views.py:293
 msgid "reply"
 msgstr "回复"
 
-#: .\views.py:248
+#: .\views.py:247
 msgid "you can't reply, this topic closed."
 msgstr "该话题已锁定，无法回复"
+
+#~ msgid "Forgot Password? Click me！"
+#~ msgstr "忘記密碼了？点我！"
 
 #~ msgid "Enter a valid date."
 #~ msgstr "请输入一个有效的日期。"

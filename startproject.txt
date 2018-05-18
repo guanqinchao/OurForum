@@ -213,7 +213,7 @@ https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/css/emojione.min.cs
 
 
 
-页面比较简洁，功能也存在Bug,有待改善，加油！
+页面比较简洁，功能也存在Bug,有待改善，加油！||<a href="{% url 'friend_agree' notice.pk 2 %}">{% trans "Disagree" %}</a><br>
 
  {% csrf_token %}
 {#避免提交表单时出现CSRF验证失败. 请求被中断.的403错误#}

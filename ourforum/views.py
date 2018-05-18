@@ -19,7 +19,7 @@ from lbutils import get_client_ip
 from django.views.generic import  DetailView,CreateView
 from .templatetags.lbforum_filters import topic_can_post
 from .forms import EditPostForm, NewPostForm, ForumForm
-from .models import Topic, Forum, Post,Application,Notice
+# from .models import Topic, Forum, Post,Application,Notice
 from ourforum.models import LoginUser as user
 from ourforum.models import *
 from ourforum_site.settings import base as settings
@@ -145,10 +145,10 @@ def index(request,template_name="ourforum/index.html"):
     topics = get_all_topics(user)
     topics = topics.order_by('-last_reply_on')[:20]
     ctx['topics'] = topics
-    if  request.user.is_authenticated():
-        k = Notice.objects.filter(receiver= request.user, status=False).count()
-        ctx['message_number'] = k
-        print(k)
+    # if  request.user.is_authenticated():
+    #     k = Notice.objects.filter(receiver= request.user, is_status=False).count()
+    #     ctx['message_number'] = k
+    #     print(k)
     return render(request, template_name, ctx)
 
 
@@ -381,7 +381,7 @@ from django.template import context_processors
 # 消息通知
 @login_required(login_url=reverse_lazy('account_login'))
 def shownotice(request):
-    notice_list = Notice.objects.filter(receiver=request.user,status=False)
+    notice_list = Notice.objects.filter(receiver=request.user,is_status=False)
     myfriends = LoginUser.objects.get(username=request.user).friends.all()
     c = context_processors.csrf(request)
     c.update({'notice_list':notice_list,'myfriends':myfriends})
@@ -395,7 +395,7 @@ def shownotice(request):
 def noticedetail(request, pk):
     pk = int(pk)
     notice = Notice.objects.get(pk=pk)
-    notice.status = True
+    notice.is_status = True
     notice.save()
     if notice.type == 0:  # 评论通知
         post_id = notice.event.post.id
@@ -409,17 +409,14 @@ def friendagree(request, pk, flag):
     flag = int(flag)
     pk = int(pk)
     entity = Notice.objects.get(pk=pk)
-    print(entity.status)
-    entity.status = True
-    print(entity.status)
+    entity.is_status = True
     application = entity.event
     application.status = flag
 
     application.receiver.friends.add(application.sender)
     application.save()
     entity.save()
-
-
+    wunai(entity,pk)
     if flag == 1:
         result_str = "已加好友"
     else:
@@ -428,6 +425,12 @@ def friendagree(request, pk, flag):
     c.update({'result_str':result_str})
     return render_to_response('ourforum/result_friend.html', context=c)
 
+def wunai(request,pk):
+    pk = int(pk)
+    print(pk)
+    entity = Notice.objects.get(pk=pk+1)
+    entity.is_status = True
+    entity.save()
 
 from ourforum.forms import MessageForm
 class MessageCreate(CreateView):
@@ -448,7 +451,11 @@ class MessageCreate(CreateView):
         formdata['receiver'] = receiver
         m = Message(**formdata)
         m.save()
-        return HttpResponse("消息发送成功！<a href='/'>返回</a>")
+        result_str = "消息发送成功！"
+        c = {}
+        c.update({'result_str': result_str})
+        return render_to_response('ourforum/result_sendmessage.html', context=c)
+        # return HttpResponse("<a href='/'>返回</a>")
 
 #具体消息
 class MessageDetail(DetailView):
@@ -585,7 +592,7 @@ def get_content(request):
         o_message.text = message
         # 调用save方法保存数据
         o_message.save()
-        result_str= '保存成功！'
+        result_str= 'It is OK！'
         c = context_processors.csrf(request)
         c.update({'result_str': result_str})
         return render_to_response('ourforum/result_bb.html', context=c)

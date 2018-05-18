@@ -22,20 +22,20 @@
 
 <form action="/form/" method="post" class="">
      {% csrf_token %}
-    <h1>{% trans "~~~留言功能区~~~" %}</h1>
+    <h1>{% trans "~~~Message function area~~~" %}</h1>
     <label>
-        <span>姓名 :</span>
+        <span>{% trans "name:" %}</span>
         <input id="name" type="text" name="name" class="error" placeholder="请输入您的姓名"/>
         <div class="error-msg"></div>
     </label>
 
     <label>
-        <span>邮箱 :</span>
+        <span>{% trans "email:" %}</span>
         <input id="email" type="email" value="" name="email" placeholder="请输入您的邮箱地址"/>
         <div class="error-msg"></div>
     </label>
     <label>
-        <span>内容 :</span>
+        <span>{% trans "content:" %}</span>
         <textarea id="message" name="message"  placeholder="请输入您的建议"></textarea>
         <div class="error-msg"></div>
     </label>

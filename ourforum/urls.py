@@ -64,7 +64,7 @@ urlpatterns = [
     url('^markitup_preview/$', views.markitup_preview,
         name='markitup_preview'),
     url(r'^makefriend/(?P<sender>\w+)/(?P<receiver>\w+)/$',  views.makefriend, name='make_friend'),
-    url(r'^user/friend/(?P<pk>\d+)/(?P<flag>\d+)/$', views.friendagree, name='friend_agree'),  # pk为对方用户id
+    url(r'^user/friend/(?P<pk>\d+)/(?P<flag>\d+)/$',  views.friendagree, name='friend_agree'),  # pk为对方用户id
     url(r'^user/notices/$', views.shownotice, name='show_notice'),
     url(r'^user/notices/(?P<pk>\d+)/$', views.noticedetail, name='notice_detail'),
     url(r'^user/messagedetail/(?P<pk>\d+)/$', MessageDetail.as_view(), name='message_detail'),  # pk为消息id
