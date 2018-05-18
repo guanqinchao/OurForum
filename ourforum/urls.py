@@ -74,4 +74,5 @@ urlpatterns = [
     url(r'^verify_check2/$', views.verify_check2, name='verify_check2'),  # 检测验证码
     url(r'^good/(?P<article_id>\d+)/(?P<user_id>\d+)$', views.good),
     url(r'^likes/', include('likes.urls')),
+    url(r'^qwo/$', views.qwo, name='contact_us'),
 ]

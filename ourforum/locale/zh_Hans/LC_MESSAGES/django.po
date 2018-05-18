@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-10 17:16+0800\n"
+"POT-Creation-Date: 2018-05-18 12:51+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -60,7 +60,7 @@ msgstr "话题类型"
 msgid "Subject"
 msgstr "标题"
 
-#: .\forms.py:59 .\forms.py:181 .\forms.py:190
+#: .\forms.py:59 .\forms.py:181 .\forms.py:202 .\forms.py:216
 msgid "Message"
 msgstr "内容"
 
@@ -148,7 +148,7 @@ msgstr "Html"
 msgid "Topic"
 msgstr "话题（复数）"
 
-#: .\models.py:211 .\templates\ourforum\profile\inc_base_profile.html:34
+#: .\models.py:211 .\templates\ourforum\profile\inc_base_profile.html:45
 #: .\templates\ourforum\topic.html:110
 msgid "Posts"
 msgstr "问答(复数)"
@@ -163,58 +163,72 @@ msgstr "话题: %s"
 msgid "Re: %s"
 msgstr "回复: %s"
 
-#: .\models.py:257
+#: .\models.py:260
 msgid "Female"
 msgstr "女"
 
-#: .\models.py:258
+#: .\models.py:261
 msgid "Male"
 msgstr "男"
 
-#: .\models.py:262 .\models.py:315
+#: .\models.py:265 .\models.py:360
 msgid "User"
 msgstr "用户"
 
-#: .\models.py:264 .\templates\ourforum\profile\change_profile.html:63
+#: .\models.py:267 .\templates\ourforum\profile\change_profile.html:79
 msgid "Nickname"
 msgstr "昵称"
 
-#: .\models.py:265 .\templates\ourforum\profile\change_profile.html:55
+#: .\models.py:268 .\templates\ourforum\profile\change_profile.html:71
 msgid "Avatar"
 msgstr "头像"
 
-#: .\models.py:272
+#: .\models.py:275
 msgid "UserProfile"
 msgstr "用户信息"
 
-#: .\models.py:273
+#: .\models.py:276
 msgid "UserProfiles"
 msgstr "用户信息（复数）"
 
-#: .\models.py:341 .\templates\ourforum\inc_header.html:11
-#, fuzzy
-#| msgid "Message"
-msgid "Messages"
-msgstr "内容"
-
-#: .\models.py:356
-#, fuzzy
-msgid "FriendApplications"
-msgstr "好友申请"
-
-#: .\models.py:374
+#: .\models.py:312
 #, fuzzy
 #| msgid "Topics"
 msgid "Notices"
 msgstr "通知（复数）"
 
-#: .\templates\ourforum\form.html:30
-msgid "给好友发消息~"
-msgstr ""
+#: .\models.py:386
+#, fuzzy
+#| msgid "Message"
+msgid "Messages"
+msgstr "内容"
 
-#: .\templates\ourforum\form.html:40
+#: .\models.py:401
+#, fuzzy
+msgid "FriendApplications"
+msgstr "好友申请"
+
+#: .\templates\ourforum\form.html:12
 msgid "~给好友发消息~"
 msgstr ""
+
+#: .\templates\ourforum\form.html:19 .\templates\ourforum\post.html:63
+#: .\templates\ourforum\profile\change_profile.html:62
+msgid "Please correct the errors below."
+msgstr "请修正下列错误"
+
+#: .\templates\ourforum\form.html:27
+msgid "Content："
+msgstr "内容："
+
+#: .\templates\ourforum\form.html:48
+msgid "Captcha:"
+msgstr "验证码："
+
+#: .\templates\ourforum\form.html:55 .\templates\ourforum\notice_list.html:15
+#: .\templates\ourforum\profile\inc_base_profile.html:33
+msgid "Send Message"
+msgstr "发消息"
 
 #: .\templates\ourforum\forum.html:20
 msgid "Forum Description"
@@ -229,12 +243,12 @@ msgid "All"
 msgstr "所有"
 
 #: .\templates\ourforum\forum.html:79
-#: .\templates\ourforum\profile\inc_base_profile.html:31
+#: .\templates\ourforum\profile\inc_base_profile.html:42
 msgid "Topics"
 msgstr "话题（复数）"
 
 #: .\templates\ourforum\forum.html:86
-#: .\templates\ourforum\plugins\inc_header_left_links.html:3
+#: .\templates\ourforum\plugins\inc_header_left_links.html:4
 #: .\templates\ourforum\recent.html:24 .\templates\ourforum\topic.html:33
 msgid "Home"
 msgstr "首页"
@@ -247,25 +261,30 @@ msgstr "发表新话题"
 msgid "Distillate District"
 msgstr "精华区"
 
-#: .\templates\ourforum\inc_header.html:12
+#: .\templates\ourforum\inc_header.html:20
 msgid "My profile"
 msgstr "个人信息"
 
-#: .\templates\ourforum\inc_header.html:13
+#: .\templates\ourforum\inc_header.html:21
 msgid "Logout"
 msgstr "退出"
 
-#: .\templates\ourforum\inc_header.html:15
+#: .\templates\ourforum\inc_header.html:22
+#: .\templates\ourforum\inc_header.html:26
+msgid "Contact Us"
+msgstr "联系我们"
+
+#: .\templates\ourforum\inc_header.html:24
 #: .\templates\ourforum\widgets\cur_user_profile.html:42
 msgid "Sign Up"
 msgstr "注册"
 
-#: .\templates\ourforum\inc_header.html:16
+#: .\templates\ourforum\inc_header.html:25
 #: .\templates\ourforum\widgets\cur_user_profile.html:45
 msgid "Login"
 msgstr "登录"
 
-#: .\templates\ourforum\inc_header.html:29
+#: .\templates\ourforum\inc_header.html:39
 msgid "Search"
 msgstr "搜索"
 
@@ -333,7 +352,7 @@ msgstr "您好，欢迎来到 "
 msgid "More"
 msgstr "更多"
 
-#: .\templates\ourforum\index.html:42
+#: .\templates\ourforum\index.html:42 .\templates\ourforum\recent.html:37
 msgid "Back To Top"
 msgstr "点击回到顶部"
 
@@ -341,27 +360,27 @@ msgstr "点击回到顶部"
 msgid "preview"
 msgstr "预览"
 
-#: .\templates\ourforum\notice_list.html:12
+#: .\templates\ourforum\notice_list.html:13
 msgid "My Friend："
 msgstr "我的好友："
 
-#: .\templates\ourforum\notice_list.html:14
-msgid "Send Message"
-msgstr "发消息"
-
-#: .\templates\ourforum\notice_list.html:19
+#: .\templates\ourforum\notice_list.html:20
 msgid "Notice:"
 msgstr "通知（复数）"
 
-#: .\templates\ourforum\notice_list.html:22
+#: .\templates\ourforum\notice_list.html:23
 msgid "Agree"
 msgstr "同意"
 
-#: .\templates\ourforum\notice_list.html:22
+#: .\templates\ourforum\notice_list.html:23
 msgid "Disagree"
 msgstr "拒绝"
 
-#: .\templates\ourforum\plugins\inc_header_left_links.html:6
+#: .\templates\ourforum\notice_list.html:28
+msgid "评论"
+msgstr ""
+
+#: .\templates\ourforum\plugins\inc_header_left_links.html:7
 msgid "Blog"
 msgstr "博客"
 
@@ -377,13 +396,8 @@ msgstr "发布"
 msgid "Edit"
 msgstr "编辑"
 
-#: .\templates\ourforum\post.html:63
-#: .\templates\ourforum\profile\change_profile.html:46
-msgid "Please correct the errors below."
-msgstr "请修正下列错误"
-
 #: .\templates\ourforum\post.html:88
-#: .\templates\ourforum\profile\change_profile.html:205
+#: .\templates\ourforum\profile\change_profile.html:221
 #: .\templates\ourforum\topic.html:140
 msgid "Submit"
 msgstr "提交"
@@ -401,7 +415,7 @@ msgid "Pages"
 msgstr "页数"
 
 #: .\templates\ourforum\profile\base.html:11
-#: .\templates\ourforum\profile\change_profile.html:72
+#: .\templates\ourforum\profile\change_profile.html:88
 msgid "Bio"
 msgstr "简介"
 
@@ -411,7 +425,7 @@ msgid "Introduction"
 msgstr "简介"
 
 #: .\templates\ourforum\profile\base.html:31
-#: .\templates\ourforum\profile\change_profile.html:39
+#: .\templates\ourforum\profile\change_profile.html:55
 msgid "Change profile"
 msgstr "更新个人信息"
 
@@ -424,11 +438,11 @@ msgstr "修改密码"
 msgid "Change %(view_user.lbforum_profile)s's profile"
 msgstr "更新 %(view_user.lbforum_profile)s 的个人信息"
 
-#: .\templates\ourforum\profile\change_profile.html:80
+#: .\templates\ourforum\profile\change_profile.html:96
 msgid "birthday"
 msgstr "生日"
 
-#: .\templates\ourforum\profile\change_profile.html:194
+#: .\templates\ourforum\profile\change_profile.html:210
 msgid "Sex"
 msgstr "性别"
 
@@ -441,11 +455,17 @@ msgstr "加入时间"
 msgid "levels："
 msgstr "积分"
 
-#: .\templates\ourforum\profile\inc_base_profile.html:39
+#: .\templates\ourforum\profile\inc_base_profile.html:31
+#, fuzzy
+#| msgid "My Friend："
+msgid "Make friend"
+msgstr "我的好友："
+
+#: .\templates\ourforum\profile\inc_base_profile.html:50
 msgid "View all topics"
 msgstr "查看所有话题"
 
-#: .\templates\ourforum\profile\inc_base_profile.html:42
+#: .\templates\ourforum\profile\inc_base_profile.html:53
 msgid "View all posts"
 msgstr "查看所有问答"
 
@@ -497,6 +517,17 @@ msgid ""
 "Click here if you do not want to wait any longer (or if your browser does "
 "not automatically forward you)"
 msgstr "等不急了？点这里！"
+
+#: .\templates\ourforum\result_friend.html:12
+#, fuzzy
+msgid "Application Result"
+msgstr "好友申请"
+
+#: .\templates\ourforum\result_friend.html:14
+#, fuzzy
+#| msgid "Default"
+msgid "result"
+msgstr "默认"
 
 #: .\templates\ourforum\topic.html:47
 msgid "undistillate"
@@ -558,6 +589,24 @@ msgstr "话题计数"
 msgid "Total number of posts"
 msgstr "问答计数"
 
+#: .\templates\ourforum\widgets\lbf_status.html:22
+#, fuzzy
+#| msgid "Total number of registered users"
+msgid "Last registered user"
+msgstr "注册用户数"
+
+#: .\templates\ourforum\widgets\lbf_status.html:26
+msgid "Online user count"
+msgstr ""
+
+#: .\templates\ourforum\widgets\lbf_status.html:30
+msgid "Today topic count"
+msgstr ""
+
+#: .\templates\ourforum\widgets\lbf_status.html:34
+msgid "Yesterday topic count"
+msgstr ""
+
 #: .\templatetags\lbforum_filters.py:72
 msgid "Online"
 msgstr "在线"
@@ -575,24 +624,24 @@ msgstr "%s ago"
 msgid "reply to see the attachments"
 msgstr "附件回复可见"
 
-#: .\views.py:152 .\views.py:245 .\views.py:275 .\views.py:286 .\views.py:301
+#: .\views.py:202 .\views.py:297 .\views.py:327 .\views.py:338 .\views.py:353
 msgid "no right"
 msgstr "无权限"
 
-#: .\views.py:187 .\views.py:247
+#: .\views.py:238 .\views.py:299
 msgid "topic"
 msgstr "话题"
 
-#: .\views.py:193 .\views.py:242
+#: .\views.py:244 .\views.py:294
 msgid "reply"
 msgstr "回复"
 
-#: .\views.py:197
+#: .\views.py:248
 msgid "you can't reply, this topic closed."
 msgstr "该话题已锁定，无法回复"
 
-msgid "Enter a valid date."
-msgstr "请输入一个有效的日期。"
+#~ msgid "Enter a valid date."
+#~ msgstr "请输入一个有效的日期。"
 
 #, fuzzy
 #~| msgid "User"

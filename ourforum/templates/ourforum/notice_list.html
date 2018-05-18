@@ -3,6 +3,7 @@
 {% load i18n %}
 {% load lbforum_filters %}
 {% load lbforum_tags %}
+
 {% block content_content %}
 <div class="box">
   <!--<div class="inner">-->
@@ -19,11 +20,14 @@
 {% trans "Notice:" %}<br>
 {% for notice in notice_list %}
 	{% ifequal notice.type 2 %}
-		{{ notice }} <a href="{% url 'friend_agree' notice.pk 1 %}">{% trans "Agree" %}</a>|<a href="{% url 'friend_agree' notice.pk 2 %}">{% trans "Disagree" %}</a><br>
+		{{ notice  }} <a href="{% url 'friend_agree' notice.pk 1 %}">{% trans "Agree" %}</a>|<a href="{% url 'friend_agree' notice.pk 2 %}">{% trans "Disagree" %}</a><br>
 	{% else %}
-		<a href="{% url 'notice_detail' notice.pk %}">{{ notice }}</a><br>
+		<a href="{% url 'notice_detail' notice.pk %}">{{ notice.status }}</a><br>
 	{% endifequal %}
+	<!--{% ifequal notice.type 0 %}-->
+            <!--{% trans "评论" %}-->
 
+	<!--{% endifequal %}-->
 {% endfor %}
   </tbody>
     </table>

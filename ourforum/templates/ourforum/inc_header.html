@@ -1,6 +1,14 @@
 {% load i18n %}
 {% load lbutils %}
 
+<link rel="stylesheet" type="text/css" href="/static/ourforum/styles/v2ex/default.css">
+<script type="text/javascript" src="/static/ourforum/js/jquery-1.11.3.min.js">
+function myrefresh() {
+    window.location.reload();
+}
+setTimeout('myrefresh()', 1000); //指定1秒刷新一次
+</script>
+
 <div id="Top">
   <div id="TopMain">
     <p id="title"><a href="{% url 'lbforum_index' %}">{% get_setting "OURFORUM_TITLE" %}</a></p>
@@ -8,12 +16,15 @@
       <ul>
         {% include 'ourforum/plugins/inc_header_left_links.html' %}
         {% if user.is_authenticated %}
-          <li id="navmessage"><a href="{% url 'show_notice' %}" hidefocus="true" >{% trans "Messages" %}({%if message_number %}{{message_number}}{%else%}2{%endif%})</a></li>
+          <br>
+          <li id="mn_portal"><a href="{% url 'show_notice' %}" hidefocus="true" >{{user.username}}({%if message_number %}{{message_number}}{%else%}0{%endif%})</a></li>
           <li id="navprofile"><a href="{% url 'lbforum_profile' %}">{% trans "My profile" %}</a></li>
           <li id="navlogout"><a href="{% get_setting 'LOGOUT_URL' %}?next={% url 'lbforum_index' %}">{% trans "Logout" %}</a></li>
-        {% else %}
+          <li id="navqwo"><a href="{% url 'contact_us' %}">{% trans "Contact Us" %}</a></li>
+          {% else %}
           <li id="navregister"><a href="{% get_setting 'SIGNUP_URL' %}">{% trans "Sign Up" %}</a></li>
           <li id="navlogin"><a href="{% get_setting 'LOGIN_URL' %}">{% trans "Login" %}</a></li>
+           <li id="navqwo"><a href="{% url 'contact_us'%}">{% trans "Contact Us" %}</a></li>
         {% endif %}
       </ul>
     </div>

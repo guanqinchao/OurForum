@@ -101,6 +101,8 @@ TEMPLATES = [
                 'django.template.context_processors.tz',
                 'django.contrib.messages.context_processors.messages',
                 'django.template.context_processors.request',
+                # 自定义模版全局变量(默认变量)
+                'ourforum.message_number.messagenumber',
             ],
         },
     },
@@ -165,7 +167,7 @@ USE_TZ = False
 
 LANGUAGES = (
     ('en-us', ('English')),
-    ('zh-hans', ('中文简体')),
+    ('zh-hans', ('中文')),
     ('zh-hant', ('中文繁體')),
     ('cs', ('Czech')),
 )
@@ -235,9 +237,11 @@ REST_FRAMEWORK = {
 }
 # 邮件配置
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.sina.cn'
-EMAIL_PORT = 25
-EMAIL_HOST_USER = '18850004329@sina.cn'
-EMAIL_HOST_PASSWORD = 'AAAaaa123'
+EMAIL_HOST = 'smtp.163.com'
+EMAIL_PORT = 465
+EMAIL_HOST_USER = 'guanqinchao@163.com'
+EMAIL_HOST_PASSWORD = 'gqc7419582630'
+EMAIL_USE_SSL = True
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 # 注册有效期天数
 CONFIRM_DAYS = 7

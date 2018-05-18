@@ -52,17 +52,27 @@
               <td width="200" align="left">
                 {{ form.remember }}
                 <span class="fade">{% trans "Remember Me" %}</span>
+                  <a class="button secondaryAction"  href="{% url 'account_reset_password' %}">
+                  {% trans "Forgot Password?" %}</a>
               </td>
             </tr>
+
             <tr>
               <td width="80" align="right"> </td>
               <td width="200" align="left">
-                {% comment %}
-                <a class="button secondaryAction" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
-                {% endcomment %}
+
                 <input type="submit" class="super normal button" value="{% trans 'Login' %}">
               </td>
             </tr>
+           <!--<tr>-->
+              <!--<td width="80" align="right"> </td>-->
+              <!--<td width="200" align="left">-->
+                <!--{% comment %}-->
+                <!--<a class="button secondaryAction" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>-->
+                <!--{% endcomment %}-->
+                <!--<input type="submit" class="super normal button" value="{% trans 'Login' %}">-->
+              <!--</td>-->
+            <!--</tr>-->
           </tbody>
         </table>
       </form>

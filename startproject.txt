@@ -202,3 +202,9 @@ status:304 Not Modified
 status:200 OK
 status:200 OK
 [06/Apr/2018 19:46:56] "GET /static/lbforum/styles/v2ex/bg_top.png HTTP/1.1" 200 1930
+
+
+ 
+python django-admin.py makemessages -l en_us
+python django-admin.py makemessages -l zh_Hans
+python django-admin.py compilemessages

@@ -3,7 +3,7 @@ from .base import *  # NOQA
 DEBUG = True
 THUMBNAIL_DEBUG = True
 DEBUG_WORKFLOW = True
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
  
 try:
     import debug_toolbar  # NOQA

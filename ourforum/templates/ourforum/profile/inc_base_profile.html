@@ -1,7 +1,7 @@
 {% load i18n %}
 {% load lbforum_tags %}
 {% load lbforum_filters %}
-
+{% load friendfilter %}
 <div class="box">
   <div class="inner">
     <table width="100%" cellspacing="0" cellpadding="0" border="0">
@@ -24,8 +24,19 @@
                   <td width="50%">
                     {% trans "levels：" %}: <strong>{{ view_user.levels }}</strong>
                   </td>
-
+  <td width="50%">
+{% if user.username %}
+       {% ifnotequal  view_user.username user.username %}
+                      {%if not view_user|checkfriend:user %}
+            <a href="{%url 'make_friend' user.username  view_user.username %}"><button type="button"> {% trans "Make friend" %}</button> </a>
+             {% else %}
+				              <a href="{% url 'send_message' view_user.id %}">{% trans "Send Message" %}</a>
+	              {% endif %}
+		      {% endifnotequal %}
+      {% endif %}
+  </td>
                 </tr>
+
                 <tr>
                   <td width="50%">
                     {% trans "Topics" %}: <strong>{{ view_user.topic_set.all.count }}</strong>

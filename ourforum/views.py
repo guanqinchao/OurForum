@@ -130,7 +130,12 @@ def get_forum_info():
     }
     return info
 
-def index(request, template_name="ourforum/index.html"):
+
+
+
+
+
+def index(request,template_name="ourforum/index.html"):
     '''
         首页
         '''
@@ -140,6 +145,10 @@ def index(request, template_name="ourforum/index.html"):
     topics = get_all_topics(user)
     topics = topics.order_by('-last_reply_on')[:20]
     ctx['topics'] = topics
+    if  request.user.is_authenticated():
+        k = Notice.objects.filter(receiver= request.user, status=False).count()
+        ctx['message_number'] = k
+        print(k)
     return render(request, template_name, ctx)
 
 
@@ -211,6 +220,9 @@ def post(request, post_id):
     post = get_object_or_404(Post, id=post_id)
     return HttpResponseRedirect(post.get_absolute_url_ext())
 
+def qwo(request, template_name="ourforum/topic.html"):
+    # post = get_object_or_404(Post)
+    return render(request, template_name)
 
 @csrf_exempt
 def markitup_preview(request, template_name="ourforum/markitup_preview.html"):
@@ -361,13 +373,17 @@ def toggle_topic_attr(request, topic_id, attr):
 def makefriend(request, sender, receiver):
     sender = User.objects.get(username=sender)
     receiver = User.objects.get(username=receiver)
-    application = Application(sender=sender, receiver=receiver, status=0)
+    application = Application(sender=sender, receiver=receiver, status=False)
     application.save()
-    return HttpResponse("OK申请发送成功！%s-->%s;<a href='/'>返回</a>" % (sender, receiver))
+    result_str = "OK申请发送成功！%s-->%s;" % (sender, receiver)
+    c = context_processors.csrf(request)
+    c.update({'result_str': result_str})
+    return render_to_response('ourforum/result_friend.html', context=c)
+
 
 from django.template import context_processors
-#消息通知
-@login_required(login_url=reverse_lazy('user_login'))
+# 消息通知
+@login_required(login_url=reverse_lazy('account_login'))
 def shownotice(request):
     notice_list = Notice.objects.filter(receiver=request.user,status=False)
     myfriends = LoginUser.objects.get(username=request.user).friends.all()
@@ -375,6 +391,9 @@ def shownotice(request):
     c.update({'notice_list':notice_list,'myfriends':myfriends})
     # return render_to_response('notice_list.html',{'notice_list':notice_list,'myfriends':myfriends},context_instance=RequestContext(request))
     return render_to_response('ourforum/notice_list.html', context=c)
+    # myfriends = LoginUser.objects.get(username=request.user).friends.all()
+    # return render_to_response('ourforum/notice_list.html', {'notice_list': notice_list, 'myfriends': myfriends},
+    #                           RequestContext(request))
 
 # 具体通知
 def noticedetail(request, pk):
@@ -394,7 +413,9 @@ def friendagree(request, pk, flag):
     flag = int(flag)
     pk = int(pk)
     entity = Notice.objects.get(pk=pk)
+    print(entity.status)
     entity.status = True
+    print(entity.status)
     application = entity.event
     application.status = flag
 
@@ -402,11 +423,15 @@ def friendagree(request, pk, flag):
     application.save()
     entity.save()
 
+
     if flag == 1:
-        str = "已加好友"
+        result_str = "已加好友"
     else:
-        str = "拒绝加好友"
-    return HttpResponse(str)
+        result_str = "拒绝加好友"
+    c = context_processors.csrf(request)
+    c.update({'result_str':result_str})
+    return render_to_response('ourforum/result_friend.html', context=c)
+
 
 from ourforum.forms import MessageForm
 class MessageCreate(CreateView):
@@ -427,7 +452,7 @@ class MessageCreate(CreateView):
         formdata['receiver'] = receiver
         m = Message(**formdata)
         m.save()
-        return HttpResponse("消息发送成功！")
+        return HttpResponse("消息发送成功！<a href='/'>返回</a>")
 
 #具体消息
 class MessageDetail(DetailView):

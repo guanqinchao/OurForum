@@ -211,10 +211,10 @@ class ProfileForm(forms.ModelForm):
     #     self.fields['birthday'].widget = widgets.AdminDateWidget()
 
 from ourforum.models import Message
-from captcha.fields import CaptchaField
+# from captcha.fields import CaptchaField
 class MessageForm(forms.ModelForm):
     content = forms.CharField(label=_('Message'), widget=forms.Textarea(attrs={'cols': '55', 'rows': '14'}))
-    captcha = CaptchaField(label=_("Captcha"))
+    # captcha = CaptchaField(label=_("Captcha"))
     class Meta:
         model = Message
         fields = ('content',)

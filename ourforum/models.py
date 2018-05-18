@@ -191,7 +191,7 @@ class Post(models.Model):
     posted_by = models.ForeignKey(settings.AUTH_USER_MODEL)
     poster_ip = models.GenericIPAddressField()
     topic_post = models.BooleanField(default=False)
-
+    comment_parent = models.ForeignKey('self', blank=True, null=True, related_name='childcomment')
     format = models.CharField(max_length=20, default='bbcode', choices=FORMAT_CHOICES)
     message = models.TextField()
     attachments = models.ManyToManyField(LBAttachment, blank=True)
@@ -239,6 +239,9 @@ class Post(models.Model):
     def update_attachments(self, attachment_ids):
         self.attachments = LBAttachment.objects.filter(pk__in=attachment_ids)
         self._update_attachments_flag()
+
+    def description(self):
+            return u'%s 回复了您的话题(%s) R:《%s》' % (self.posted_by, self.topic, self.message)
 
     @models.permalink
     def get_absolute_url(self):
@@ -291,6 +294,35 @@ class OurForumUserProfile(models.Model):
 
     def get_large_avatar_url(self):
         return self.get_avatar_url(80)
+class Notice(models.Model):
+    sender = models.ForeignKey(settings.AUTH_USER_MODEL, related_name='notice_sender')  # 发送者
+    receiver = models.ForeignKey(settings.AUTH_USER_MODEL, related_name='notice_receiver')  # 接收者
+    content_type = models.ForeignKey(ContentType)
+    object_id = models.PositiveIntegerField()
+    event = generic.GenericForeignKey('content_type', 'object_id')
+
+    status = models.BooleanField(default=False)  # 是否阅读
+    type = models.IntegerField()  # 通知类型 0:评论 1:好友消息 2:好友申请
+    created_on = models.DateTimeField(auto_now_add=True, blank=True)
+    updated_on = models.DateTimeField(blank=True, null=True,auto_now_add=True)
+    objects = models.Manager()
+    class Meta:
+        db_table = 'notice'
+        ordering = ['-created_on']
+        verbose_name_plural = _(u"Notices")
+
+    def __str__(self):
+        return u"%s的事件: %s" % (self.sender, self.description())
+
+    def description(self):
+        if self.event:
+            return self.event.description()
+        return "No Event"
+
+    def reading(self):
+        if not self.status:
+            status = True
+
 
 
 def create_user_profile(sender, instance, created, **kwargs):
@@ -305,6 +337,19 @@ def update_last_post(sender, instance, created, **kwargs):
         forum = topic.forum
         topic.update_state_info(last_post=post)
         forum.update_state_info(last_post=post)
+
+def comment_save(sender, instance, signal, created, **kwargs):
+    post = instance
+    if created:
+       topic = instance.topic
+       if str(post.created_on)[:19] == str(post.updated_on)[:19]:
+           if post.posted_by != topic.posted_by:  # 作者的回复不给作者通知
+               event = Notice(sender=post.posted_by, receiver=topic.posted_by, event=post, type=0)
+               event.save()
+               if post.comment_parent is not None:  # 回复评论给要评论的人通知
+                     if post.posted_by.id != post.comment_parent.posted_by.id:  # 自己给自己写评论不通知
+                        event = Notice(sender=post.posted_by, receiver=post.comment_parent.posted_by, event=post, type=0)
+                        event.save()
 
 class LoginUser(AbstractUser):
     levels = models.PositiveIntegerField(default=0,verbose_name=u'积分')
@@ -356,46 +401,33 @@ class Application(models.Model):  # 好友申请
         verbose_name_plural = _(u"FriendApplications")
 
 
-class Notice(models.Model):
-    sender = models.ForeignKey(settings.AUTH_USER_MODEL, related_name='notice_sender')  # 发送者
-    receiver = models.ForeignKey(settings.AUTH_USER_MODEL, related_name='notice_receiver')  # 接收者
-    content_type = models.ForeignKey(ContentType)
-    object_id = models.PositiveIntegerField()
-    event = generic.GenericForeignKey('content_type', 'object_id')
-
-    status = models.BooleanField(default=False)  # 是否阅读
-    type = models.IntegerField()  # 通知类型 0:评论 1:好友消息 2:好友申请
-    created_on = models.DateTimeField(auto_now_add=True, blank=True)
-    updated_on = models.DateTimeField(blank=True, null=True,auto_now_add=True)
-
-    class Meta:
-        db_table = 'notice'
-        ordering = ['-created_on']
-        verbose_name_plural = _(u"Notices")
-
-    def __str__(self):
-        return u"%s的事件: %s" % (self.sender, self.description())
-
-    def description(self):
-        if self.event:
-            return self.event.description()
-        return "No Event"
-
-    def reading(self):
-        if not self.status:
-            status = True
+# class Comment(models.Model):  # 评论
+#     topic = models.ForeignKey(Topic)
+#     author = models.ForeignKey(settings.AUTH_USER_MODEL)
+#     comment_parent = models.ForeignKey('self', blank=True, null=True, related_name='childcomment')
+#     content = models.TextField()
+#
+#     created_on = models.DateTimeField(auto_now_add=True)
+#     updated_on = models.DateTimeField(auto_now=True)
+#
+#     class Meta:
+#         db_table = 'comment'
+#         ordering = ['created_on']
+#         verbose_name_plural = u'评论'
+#
+#     def __str_(self):
+#         return self.content
+#
+#     def description(self):
+#         return u'%s 回复了您的话题(%s) R:《%s》' % (self.author, self.post, self.content)
+#
+#     @models.permalink
+#     def get_absolute_url(self):
+#         return ('post_detail', (), {'post_pk': self.post.pk})
 
 
-def comment_save(sender, instance, signal, *args, **kwargs):
-    entity = instance
-    if str(entity.created_on)[:19] == str(entity.updated_on)[:19]:
-        if entity.author != entity.post.author:  # 作者的回复不给作者通知
-            event = Notice(sender=entity.author, receiver=entity.post.author, event=entity, type=0)
-            event.save()
-        if entity.comment_parent is not None:  # 回复评论给要评论的人通知
-            if entity.author.id != entity.comment_parent.author.id:  # 自己给自己写评论不通知
-                event = Notice(sender=entity.author, receiver=entity.comment_parent.author, event=entity, type=0)
-                event.save()
+
+
 
 
 def application_save(sender, instance, signal, *args, **kwargs):
@@ -412,12 +444,14 @@ def message_save(sender, instance, signal, *args, **kwargs):
         event.save()
 
 
+
+from django.db.models import signals
 # 消息响应函数注册
-# signals.post_save.connect(comment_save, sender=Comment)
-post_save.connect(application_save, sender=Message)
-post_save.connect(message_save, sender=Application)
+signals.post_save.connect(comment_save, sender=Post)
+signals.post_save.connect(application_save, sender=Message)
+signals.post_save.connect(message_save, sender=Application)
 # signals.post_save.connect(post_save, sender=Post)
 # signals.post_delete.connect(post_delete, sender=Post)
-post_save.connect(create_user_profile, sender=LoginUser)
+signals.post_save.connect(create_user_profile, sender=LoginUser)
 # post_save.connect(create_user_profile, sender=User)
-post_save.connect(update_last_post, sender=Post)
+signals.post_save.connect(update_last_post, sender=Post)

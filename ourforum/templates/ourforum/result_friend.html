@@ -1,0 +1,23 @@
+{% extends 'ourforum/profile/base.html' %}
+
+{% load i18n %}
+{% load lbforum_filters %}
+{% load lbforum_tags %}
+
+{% block content_content %}
+<div class="box">
+  <!--<div class="inner">-->
+     <table cellspacing="0" cellpadding="5" border="0">
+      <tbody>
+ {% trans "Application Result" %}<br>
+
+ {% trans "result" %}: {{ result_str  }}
+ <a href='/user/notices'>返回消息页面</a>
+<br>
+
+
+
+  </tbody>
+    </table>
+     </div>
+{% endblock %}

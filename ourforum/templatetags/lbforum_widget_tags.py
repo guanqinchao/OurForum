@@ -12,7 +12,7 @@ def lbf_categories_and_forums(forum=None, template='ourforum/widgets/categories_
             'forum': forum,
             'categories': Category.objects.all()}
 
-import json
+
 @register.inclusion_tag('ourforum/tags/dummy.html')
 def lbf_status(template='ourforum/widgets/lbf_status.html'):
     User = get_user_model()

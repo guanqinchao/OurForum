@@ -116,7 +116,7 @@ class EmailConfirmation(models.Model):
                                          email_address=email_address)
             return email_address
 
-    def send(self, request=None, signup=False):
+    def send(self, request=None, signup=True):
         get_adapter(request).send_confirmation_mail(request, self, signup)
         self.sent = timezone.now()
         self.save()
@@ -162,7 +162,7 @@ class EmailConfirmationHMAC:
                                          email_address=email_address)
             return email_address
 
-    def send(self, request=None, signup=False):
+    def send(self, request=None, signup=True):
         get_adapter(request).send_confirmation_mail(request, self, signup)
         signals.email_confirmation_sent.send(sender=self.__class__,
                                              request=request,

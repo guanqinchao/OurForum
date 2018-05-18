@@ -259,6 +259,7 @@ def _base_signup_form_class():
 class BaseSignupForm(_base_signup_form_class()):
     username = forms.CharField(label=_("Username"),
                                min_length=app_settings.USERNAME_MIN_LENGTH,
+                               max_length = 11,
                                widget=forms.TextInput(
                                    attrs={'placeholder':
                                           _('Username'),
