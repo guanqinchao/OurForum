@@ -162,6 +162,7 @@ a.dark:hover {
 	padding: 7px 0px 0px 0px;
 
 }
+#navqwo a:hover,.header .nav li#navqwo.a a{background-position:-2px -0;}
 
 
 #Navigation {

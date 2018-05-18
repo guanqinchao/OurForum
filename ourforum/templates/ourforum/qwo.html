@@ -1,0 +1,53 @@
+{% extends 'ourforum/profile/base.html' %}
+
+{% load i18n %}
+{% load lbforum_filters %}
+{% load lbforum_tags %}
+{% block content_content %}
+
+
+<link rel="stylesheet" href="/static/ourforum/css/style.css">
+<div class="box">
+	  <div class="inner">
+      <!--<form action="/" accept-charset="utf-8" method="post" class="frm-form" id="afocus">-->
+
+
+<!--<head>-->
+    <!--<meta charset="UTF-8">-->
+    <!--<meta http-equiv="X-UA-Compatible" content="IE=emulateIE7" />-->
+    <!--<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />-->
+    <!--<title></title>-->
+
+<!--</head>-->
+
+<form action="/form/" method="post" class="">
+     {% csrf_token %}
+    <h1>{% trans "~~~留言功能区~~~" %}</h1>
+    <label>
+        <span>姓名 :</span>
+        <input id="name" type="text" name="name" class="error" placeholder="请输入您的姓名"/>
+        <div class="error-msg"></div>
+    </label>
+
+    <label>
+        <span>邮箱 :</span>
+        <input id="email" type="email" value="" name="email" placeholder="请输入您的邮箱地址"/>
+        <div class="error-msg"></div>
+    </label>
+    <label>
+        <span>内容 :</span>
+        <textarea id="message" name="message"  placeholder="请输入您的建议"></textarea>
+        <div class="error-msg"></div>
+    </label>
+    <div class="success-msg"></div>
+    <label>
+        <br>
+        <span>&nbsp;</span>
+        <input type="submit" class="button" value="提交"/>
+    </label>
+
+
+</form>
+
+          {% endblock %} </div>
+</div>

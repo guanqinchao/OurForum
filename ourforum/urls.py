@@ -75,4 +75,5 @@ urlpatterns = [
     url(r'^good/(?P<article_id>\d+)/(?P<user_id>\d+)$', views.good),
     url(r'^likes/', include('likes.urls')),
     url(r'^qwo/$', views.qwo, name='contact_us'),
+    url(r'^form/', views.get_content),
 ]

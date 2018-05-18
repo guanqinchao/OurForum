@@ -444,6 +444,25 @@ def message_save(sender, instance, signal, *args, **kwargs):
         event.save()
 
 
+from django.utils import timezone
+class Bulletin_board(models.Model):
+    name = models.CharField(max_length=20, verbose_name='姓名', null=False, blank=True, default="")
+    email = models.EmailField(verbose_name='邮箱', null=False, blank=True, default="")
+    text = models.TextField(verbose_name='留言内容', null=False, blank=True, default="")
+    create_time = models.DateTimeField(default=timezone.now, verbose_name='创建时间', null=False, blank=False)
+
+    class Meta:
+        verbose_name = _(u"Bulletin_boardcontent")
+        verbose_name_plural = _(u"Bulletin_boardlist")  # 指定模型复数名称
+        ordering = ['create_time']  # 按 name 字段排序
+        db_table = "bulletinboard"
+
+    # 使在后台显示的对象名称更加友好
+    def __str__(self):
+        return self.name
+
+
+
 
 from django.db.models import signals
 # 消息响应函数注册

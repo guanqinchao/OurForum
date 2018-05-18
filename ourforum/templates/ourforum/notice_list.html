@@ -20,7 +20,7 @@
 {% trans "Notice:" %}<br>
 {% for notice in notice_list %}
 	{% ifequal notice.type 2 %}
-		{{ notice  }} <a href="{% url 'friend_agree' notice.pk 1 %}">{% trans "Agree" %}</a>|<a href="{% url 'friend_agree' notice.pk 2 %}">{% trans "Disagree" %}</a><br>
+		{{ notice  }} <a href="{% url 'friend_agree' notice.pk 1 %}">{% trans "Agree" %}</a>||<a href="{% url 'friend_agree' notice.pk 2 %}">{% trans "Disagree" %}</a><br>
 	{% else %}
 		<a href="{% url 'notice_detail' notice.pk %}">{{ notice.status }}</a><br>
 	{% endifequal %}

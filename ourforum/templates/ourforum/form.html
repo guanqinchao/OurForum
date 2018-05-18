@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="/static/ourforum/css/myemojiPl.css">
 	  <div class="inner">
       <form action="" accept-charset="utf-8" method="post" class="frm-form" id="afocus">
-         {% trans "~给好友发消息~" %}
+         {% trans "~给好友发消息~" %}<br>
           {% csrf_token %}
         {% if redirect_field_value %}
           <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
@@ -44,12 +44,12 @@
         <!--</div>-->
     <!--</div>-->
 
-            <tr>
-              <td width="120" align="right"> {% trans "Captcha:" %} </td>
-              <td width="200" align="left">
-                {{ form.captcha }}
-              </td>
-            </tr>
+            <!--<tr>-->
+              <!--<td width="120" align="right"> {% trans "Captcha:" %} </td>-->
+              <!--<td width="200" align="left">-->
+                <!--{{ form.cap }}-->
+              <!--</td>-->
+            <!--</tr>-->
             <tr>
               <td width="120" align="right"> </td>
               <td width="200" align="left"> <input type="submit" class="super normal button" value="{% trans 'Send Message' %}"> </td>

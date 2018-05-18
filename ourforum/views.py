@@ -220,10 +220,6 @@ def post(request, post_id):
     post = get_object_or_404(Post, id=post_id)
     return HttpResponseRedirect(post.get_absolute_url_ext())
 
-def qwo(request, template_name="ourforum/topic.html"):
-    # post = get_object_or_404(Post)
-    return render(request, template_name)
-
 @csrf_exempt
 def markitup_preview(request, template_name="ourforum/markitup_preview.html"):
     return render(request, template_name, {'message': request.POST['data']})
@@ -572,3 +568,26 @@ def good(request, topic_id, user_id):
         Post.objects.filter(id=topic_id).update(up_count=str(new_up_count))
         Up.objects.filter(topic_id=topic_id, user_id=user_id).update(up=True)
         return HttpResponse(json.dumps(result))
+
+
+def qwo(request):
+    return render(request, 'ourforum/qwo.html')
+
+def get_content(request):
+    if request.method == 'POST':
+        name = request.POST.get('name', '')
+        email = request.POST.get('email', '')
+        message = request.POST.get('message', '')
+        # 实例化对象
+        o_message = Bulletin_board()
+        o_message.name = name
+        o_message.email = email
+        o_message.text = message
+        # 调用save方法保存数据
+        o_message.save()
+        result_str= '保存成功！'
+        c = context_processors.csrf(request)
+        c.update({'result_str': result_str})
+        return render_to_response('ourforum/result_bb.html', context=c)
+    else:
+        return render(request, 'ourforum/qwo.html')

@@ -6,6 +6,10 @@ from django.utils.translation import ugettext_lazy as _
 
 from .models import Category, Forum, TopicType, Topic,LoginUser,Message,Application,Notice
 from .models import Post,OurForumUserProfile
+from .models import Bulletin_board
+
+
+admin.site.register(Bulletin_board)
 
 admin.site.register(Category)
 admin.site.site_header = '社区问答系统后台管理'

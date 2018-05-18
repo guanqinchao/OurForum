@@ -140,10 +140,10 @@ a.dark:hover {
 }
 
 #TopMain {
-	width:1500px;
-	height: 52px;
-	text-align: left;
-	margin: 0px auto 0px auto;
+	width:1000px;
+	height: 100px;
+	text-align: center;
+	margin: 2px auto 2px auto;
 }
 
 #Logo {
@@ -162,18 +162,16 @@ a.dark:hover {
 	padding: 7px 0px 0px 0px;
 
 }
+#navqwo a:hover,.header .nav li#navqwo.a a{background-position:-2px -0;}
 
 
 #Navigation {
-	float: right;
-	text-align: right;
-	font-size: 14px;
+	float: left;
+	text-align: left;
+	font-size: 15px;
 	color: #fff;
 	margin-top: 13px;
 	line-height: 14px;
-	clear:both;
-
-	overflow:hidden
 }
 
 #Navigation ul {
@@ -1043,8 +1041,8 @@ a.fade:hover {
     display: block;
     float: left;
     margin-top: 8px;
-    margin-left: 0px;
-    margin-right: 10px;
+    margin-left: 2px;
+    margin-right: 45px;
 }
 #TopMain #title a, #TopMain #title a:link, #TopMain #title a:visited {
     color: #FFFFFF;

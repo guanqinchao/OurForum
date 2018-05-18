@@ -1,0 +1,23 @@
+{% extends 'ourforum/profile/base.html' %}
+
+{% load i18n %}
+{% load lbforum_filters %}
+{% load lbforum_tags %}
+
+{% block content_content %}
+<div class="box">
+  <!--<div class="inner">-->
+     <table cellspacing="0" cellpadding="5" border="0">
+      <tbody>
+ {% trans " The Result of leave a message " %}<br>
+
+ {% trans "result" %}: {{ result_str  }}
+ <a href='/'>返回首页</a>
+<br>
+
+
+
+  </tbody>
+    </table>
+     </div>
+{% endblock %}
